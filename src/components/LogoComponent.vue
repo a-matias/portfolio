@@ -1,5 +1,8 @@
 <template>
+  <div class="flex-col">
     <img alt="Vue logo" src="../assets/logo.svg" >
+  </div>
+    
 </template>
 
 <script>
@@ -13,7 +16,7 @@ img {
   position: relative;
 
   @media screen and (max-width: 768px) {
-    width: 380px;
+    width: 250px;
   }
   
 }
