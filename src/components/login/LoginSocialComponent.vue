@@ -49,7 +49,7 @@
   import { defineComponent } from "vue";
   
   export default defineComponent({
-    name: "SocialLoginComponent",
+    name: "LoginSocialComponent@",
     setup() {
       const handleGoogleLogin = () => {
         console.log("Google login clicked");
