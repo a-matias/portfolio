@@ -8,8 +8,14 @@
 
 <style lang="scss">
 
-img{
-    width: 1250px;
-    
+img {
+  width: 800px;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    width: 380px;
+  }
+  
 }
+
 </style>
