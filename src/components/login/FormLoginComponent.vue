@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container">
+  <div class="login-container bg-gradient-to-t from-slate-50 to-slate-200">
     <form @submit.prevent="handleLogin">
       <h1 class="text-3xl">Iniciar Sesión</h1>
 

@@ -12,8 +12,8 @@
 <style lang="scss">
 
 img {
-  width: 800px;
-  position: relative;
+  width: 550px;
+ 
 
   @media screen and (max-width: 768px) {
     width: 250px;
