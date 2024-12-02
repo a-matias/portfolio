@@ -2,7 +2,7 @@
     <div class="flex justify-center mt-5">
       <div class="w-full text-center">
         <h3>O ingresa por:</h3>
-        <button class="social-button google bg-slate-200" @click="handleGoogleLogin">
+        <button class="social-button google bg-slate-200" @click="loginGoogle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -28,7 +28,7 @@
           </svg>
            Google
         </button>
-        <button class="social-button facebook bg-slate-200" @click="handleFacebookLogin">
+        <button class="social-button facebook bg-slate-200">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -45,28 +45,24 @@
     </div>
   </template>
   
-  <script lang="ts">
-  import { defineComponent } from "vue";
-  
-  export default defineComponent({
-    name: "LoginSocialComponent@",
-    setup() {
-      const handleGoogleLogin = () => {
-        console.log("Google login clicked");
-        // Agregar lógica para autenticación con Google
-      };
-  
-      const handleFacebookLogin = () => {
-        console.log("Facebook login clicked");
-        // Agregar lógica para autenticación con Facebook
-      };
-  
-      return {
-        handleGoogleLogin,
-        handleFacebookLogin,
-      };
-    },
-  });
+  <script lang="ts" setup>
+  import { GoogleAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
+    const googleProvider = new GoogleAuthProvider()
+    const auth = getAuth()
+
+    const loginGoogle = () => {
+
+        signInWithPopup(auth, googleProvider)
+        .then( (result) =>{
+            const credential = GoogleAuthProvider.credentialFromResult(result)
+            const token = credential?.accessToken;
+            console.log(token)
+            alert("Success")
+        })
+        .catch( (error) =>{
+            alert("Login Failed")
+        })
+    }
   </script>
   
   <style scoped lang="scss">

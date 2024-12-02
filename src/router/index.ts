@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import FirebaseView from '@/views/FirebaseView.vue'
 import LoginView from '@/views/LoginView.vue'
+import SocialView from '@/views/SocialView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/firebase',
     name: 'firebase',
     component: FirebaseView
+  },
+  {
+    path: '/social',
+    name: 'social',
+    component: SocialView
+  
   }
 ]
 

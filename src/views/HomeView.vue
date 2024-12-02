@@ -4,6 +4,7 @@
       <LogoComponent/>
       <ButtonComponent label="Iniciar Sesión" route="/login"/>
       <ButtonComponent label="Firebase" route="/firebase" />
+      <ButtonComponent label="Social" route="/social" />
     </div>
    
   </div>
