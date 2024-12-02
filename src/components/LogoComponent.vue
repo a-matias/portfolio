@@ -9,7 +9,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 img {
   width: 550px;

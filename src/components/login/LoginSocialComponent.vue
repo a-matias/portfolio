@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center mt-5">
-      <div class="w-1/2 text-center">
+      <div class="w-full text-center">
         <h3>O ingresa por:</h3>
         <button class="social-button google bg-slate-200" @click="handleGoogleLogin">
           <svg
