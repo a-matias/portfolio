@@ -16,6 +16,9 @@
     <HomeComponent />
 
     <!-- About Section -->
+    <ProjectsComponent />
+
+    <!-- About Section -->
     <AboutComponent />
 
     <!-- Footer Section -->
@@ -29,6 +32,7 @@ import HomeComponent from '@/components/HomeComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 import NavbarComponent from '@/components/NavbarComponent.vue' ;
+import ProjectsComponent from './components/ProjectsComponent.vue';
 
 </script>
 
