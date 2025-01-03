@@ -24,21 +24,12 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import HomeComponent from '@/components/HomeComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 import NavbarComponent from '@/components/NavbarComponent.vue' ;
 
-export default {
-  name: 'App',
-  components: {
-    HomeComponent,
-    AboutComponent,
-    FooterComponent,
-    NavbarComponent
-  }
-};
 </script>
 
 <style lang="scss">

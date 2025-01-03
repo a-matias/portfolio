@@ -1,36 +1,63 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center bg-white pt-20" id="home">
+    <section class="min-h-screen flex items-center justify-center" id="home">
       <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center">
         <div class="flex justify-center items-center">
             <img :src="logoUrl" alt="logo" />
         </div>
        
-        <h1 class="text-4xl font-bold mb-4">{{ message }}</h1>
-        <p class="text-lg text-gray-700">{{ description }}</p>
+        <div class="w-full">
+          <h1 class="text-4xl font-bold mb-4">{{ displayedMessage }}<span class="blinking-cursor">|</span></h1>
+          <p class="text-lg text-gray-700">{{ description }}</p>
+        </div>
+        
+        <div class="pt-5 inline-block">
+          <SocialNetworkComponent />
+        </div>
+
       </div>
     </section>
   </template>
   
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
-import logo from '@/assets/foto.svg';
+<script lang="ts" setup>
+import { Ref, ref } from 'vue'
+import logo from '@/assets/foto.svg'
+import SocialNetworkComponent from './SocialNetworkComponent.vue'
 
 
-export default defineComponent({
-  name: 'HomeComponent',
-  setup() {
-    // Usando Composition API para definir el estado
-    const message = ref('¡Hola! Soy Matías Andrés');
-    const description = ref('Explora mi trabajo y proyectos.');
-    const logoUrl = ref(logo); // Usando `ref` para la imagen
+const message: Ref<string> = ref('¡Hola! Soy Matías Andrés..');
+const displayedMessage: Ref<string> = ref('');
+//const description: Ref<string> = ref('Analista en Sistemas');
+const logoUrl: Ref<string> = ref(logo);
 
-    return { message, description, logoUrl }; // Retornamos lo que será accesible en el template
-  }
-});
+  const typewriterEffect = () => {
+  let index = 0;
+  const speed = 100; // Velocidad en milisegundos entre cada letra
+  const type = () => {
+    if (index < message.value.length) {
+      displayedMessage.value += message.value[index];
+      index++;
+      setTimeout(type, speed);
+    }
+  };
+  type();
+};
+
+typewriterEffect();
+   
 </script>
 
   
-  <style scoped>
-  /* Puedes agregar estilos específicos para este componente */
-  </style>
+<style scoped>
+  .blinking-cursor {
+  display: inline-block;
+  width: 10x;
+  animation: blink 1s steps(2, start) infinite;
+  }
+
+    @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+</style>
   
