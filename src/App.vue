@@ -1,19 +1,57 @@
 <template>
-  <router-view/>
+  <div id="app">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-10">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Menú de hamburguesa si es necesario -->
+          </div>
+          <NavbarComponent />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <HomeComponent />
+
+    <!-- About Section -->
+    <AboutComponent />
+
+    <!-- Footer Section -->
+    <FooterComponent />
+   
+  </div>
 </template>
 
+<script lang="ts">
+import HomeComponent from '@/components/HomeComponent.vue';
+import AboutComponent from '@/components/AboutComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
+import NavbarComponent from '@/components/NavbarComponent.vue' ;
+
+export default {
+  name: 'App',
+  components: {
+    HomeComponent,
+    AboutComponent,
+    FooterComponent,
+    NavbarComponent
+  }
+};
+</script>
+
 <style lang="scss">
+/* Estilos globales */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /*background-image: linear-gradient( 107.7deg,  rgba(235,230,44,0.55) 8.4%, rgba(252,152,15,1) 90.3% );*/
-  color: #2c3e50;
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  padding: 0;
 }
 
 html, body {
@@ -21,5 +59,11 @@ html, body {
   height: 100%;
 }
 
+section {
+  padding: 50px 0; /* Espaciado para las secciones */
+}
 
+footer {
+  margin-top: 50px;
+}
 </style>
