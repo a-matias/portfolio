@@ -1,16 +1,13 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center" id="home">
-      <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center">
-        <div class="flex justify-center items-center">
-            <img :src="logoUrl" alt="logo" />
+    <section class="min-h-screen flex items-center justify-center bg-slate-50" id="home">
+      <div v-scroll="'fade-in'" class="containerHome opacity-0 transition-all duration-500 text-center">
+        <div class="containerPic">
+          <img :src="logoUrl" alt="logo" />
         </div>
-       
-        <div class="w-full">
+
           <h1 class="nombre">{{ displayedMessage }}<span class="blinking-cursor">|</span></h1>
-          <p class="text-lg text-gray-700">{{ description }}</p>
-        </div>
-        
-        <div class="pt-5 inline-block">
+
+        <div class="containerSocialNetwork">
           <SocialNetworkComponent />
         </div>
 
@@ -51,25 +48,50 @@ typewriterEffect();
 
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play&family=Diphylleia&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  .nombre{
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-size: 30px;
-    font-style: normal;
-    color: rgb(26, 63, 226);
+.containerHome{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 40vw;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 30px;
+  border-radius: 50px;
+  background-color: #fff;
+}
 
-  }
+.containerPic{
+  display: flex;
+  justify-content: center;
+}
 
-  .blinking-cursor {
-  display: inline-block;
-  width: 10x;
-  animation: blink 1s steps(2, start) infinite;
-  }
+img{
+  width: 18vw;
+}
 
-    @keyframes blink {
-    to {
-      visibility: hidden;
-    }
+.containerSocialNetwork{
+  display: flex;
+  justify-content: center;
+
+}
+
+.nombre{
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+
+}
+
+.blinking-cursor {
+display: inline-block;
+animation: blink 1s steps(2, start) infinite;
+}
+
+  @keyframes blink {
+  to {
+    visibility: hidden;
   }
+}
 </style>
   

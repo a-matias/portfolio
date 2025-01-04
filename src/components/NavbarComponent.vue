@@ -1,7 +1,9 @@
 <template>
 
   <div class="navBar">
-    <div class="nombre flex-shrink-0 text-2xl font-bold text-gray-700">Matías Andrés</div>
+    <div class="nombre flex-shrink-0 text-2xl font-bold text-gray-700">
+      <font-awesome-icon :icon="['fas', 'code']" />
+    </div>
     <div class="containerLinks">
       <a class="links" href="#projects" @click.prevent="scrollToSection('about')">About</a>
       <a class="links" href="#projects" @click.prevent="scrollToSection('projects')">Mis proyectos</a>
@@ -14,6 +16,7 @@
 </template>
 
 <script lang="ts" setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 function scrollToSection(sectionId: string): void {
   const section = document.getElementById(sectionId);

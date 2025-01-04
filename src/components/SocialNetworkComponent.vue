@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-evenly mt-10">
+    <div class="ContainerIcons">
       <ul class="iconSocial">
         <FontAwesomeIcon :icon="['fab', 'linkedin']" />
       </ul>
@@ -26,24 +26,34 @@
   
   <style scoped>
     
-    .iconSocial {
-        width: 50px;
-        font-size: 20px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        border: 2px solid rgb(27, 27, 26);
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+  .ContainerIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20vw;   
+    height: 10vh;
+    align-items:flex-end;
+  }
 
-    .iconSocial:hover{
-        background-color:rgb(27, 27, 26);
-        color:aliceblue;
-        transition: 0.5s;
-    }
+  .iconSocial {
+      display: flex;
+      width: 3vw;
+      height: 3vw;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid rgb(27, 27, 26);
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+
+  .iconSocial:hover{
+      background-color:rgb(27, 27, 26);
+      color:aliceblue;
+      transition: 0.4s;
+  }
 
 
   </style>
