@@ -39,11 +39,12 @@ import ProjectsComponent from './components/ProjectsComponent.vue';
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-content: center;
   text-align: center;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 html, body {
@@ -52,10 +53,12 @@ html, body {
 }
 
 section {
-  padding: 50px 0; /* Espaciado para las secciones */
+  padding: 50px 0; 
 }
 
 footer {
   margin-top: 50px;
 }
+
+
 </style>

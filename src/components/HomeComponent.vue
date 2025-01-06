@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center bg-slate-50" id="home">
+    <section class="min-h-screen flex items-center justify-center" id="home">
       <div v-scroll="'fade-in'" class="containerHome opacity-0 transition-all duration-500 text-center">
         <div class="containerPic">
           <img :src="logoUrl" alt="logo" />
@@ -57,12 +57,15 @@ typewriterEffect();
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 30px;
   border-radius: 50px;
-  background-color: #fff;
+  
 }
 
-.containerPic{
-  display: flex;
-  justify-content: center;
+.nombre{
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+
 }
 
 img{
@@ -75,13 +78,11 @@ img{
 
 }
 
-.nombre{
-  font-family: "Poppins", serif;
-  font-weight: 400;
-  font-size: 30px;
-  font-style: normal;
-
+.containerPic{
+  display: flex;
+  justify-content: center;
 }
+
 
 .blinking-cursor {
 display: inline-block;
@@ -93,5 +94,49 @@ animation: blink 1s steps(2, start) infinite;
     visibility: hidden;
   }
 }
+
+@media (max-width: 1024) {
+  .containerHome {
+    width: 80vw;
+    padding: 25px; 
+    border-radius: 0;
+    box-shadow: none;    
+  }
+}
+
+@media (max-width: 768px) {
+  .containerHome {
+    width: 100vw; 
+    padding: 20px; 
+    border-radius: 0;
+    box-shadow: none;
+    background-color:inherit;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .containerHome {
+    width: 100vw; 
+    border-radius: 0;
+    align-content:flex-start;
+    box-shadow: none;
+    background-color: none;
+
+  }
+
+  .nombre{
+  font-size: 25px;
+  }
+
+  img{
+    width: 70vw;
+  }
+
+}
+
+
+
+
 </style>
   

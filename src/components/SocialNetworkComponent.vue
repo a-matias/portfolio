@@ -40,7 +40,6 @@
       width: 3vw;
       height: 3vw;
       font-size: 20px;
-      display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 50%;
@@ -55,6 +54,32 @@
       transition: 0.4s;
   }
 
+  @media (max-width: 576px) {
+
+    .ContainerIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50vw;   
+    height: 10vh;
+    align-items:flex-end;
+
+    }
+
+    .iconSocial {
+      display: flex;
+      width: 8vw;
+      height: 4vh;
+      font-size: 16px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid rgb(27, 27, 26);
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+  }
 
   </style>
   
