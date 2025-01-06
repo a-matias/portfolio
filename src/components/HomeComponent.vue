@@ -117,7 +117,7 @@ animation: blink 1s steps(2, start) infinite;
 
 @media (max-width: 576px) {
   .containerHome {
-    width: 100vw; 
+    width: 85vw; 
     border-radius: 0;
     align-content:flex-start;
     box-shadow: none;

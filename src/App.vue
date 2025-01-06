@@ -34,7 +34,7 @@ import ProjectsComponent from './components/ProjectsComponent.vue';
 </script>
 
 <style lang="scss">
-/* Estilos globales */
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
