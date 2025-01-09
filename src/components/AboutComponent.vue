@@ -3,7 +3,7 @@
       <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center justify-between">
         <h2 class="text-3xl font-semibold mb-4">Acerca de mí</h2>
       
-        <div class="flex items-center justify-around space-x-4">
+        <div class="flex items-center justify-around ">
           <!-- Párrafo 1 -->
           <p class="cardAbout p-5 bg-sky-200 shadow-md text-justify border">
           {{ description }}
