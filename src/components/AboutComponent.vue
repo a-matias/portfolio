@@ -1,18 +1,15 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center bg-gray-200" id="about">
-      <div
-        v-scroll="'fade-in'"
-        class="opacity-0 transition-all duration-500 text-center justify-between"
-      >
-      <h2 class="text-3xl font-semibold mb-4">Acerca de mí</h2>
+    <section class="container" id="about">
+      <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center justify-between">
+        <h2 class="text-3xl font-semibold mb-4">Acerca de mí</h2>
       
-      <div class="flex items-center justify-around space-x-4">
-        <!-- Párrafo 1 -->
-        <p class="cardAbout text-lg text-gray-700 p-5 bg-sky-200 shadow-md text-justify w-1/4 border">
-        {{ description }}
-        </p>
-        
-      </div>
+        <div class="flex items-center justify-around space-x-4">
+          <!-- Párrafo 1 -->
+          <p class="cardAbout p-5 bg-sky-200 shadow-md text-justify border">
+          {{ description }}
+          </p>
+          
+        </div>
        
       </div>
     </section>
@@ -39,6 +36,14 @@ import { Ref, ref } from 'vue'
   
   <style scoped>
   /* Estilos para la sección de About */
+
+  .container{
+    justify-content: center;
+    align-content: center;
+    width: 50vw;
+    height: 100vh;
+  }
+
 
   @media (max-width: 576px) {
     .cardAbout{

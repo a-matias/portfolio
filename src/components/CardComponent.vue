@@ -55,17 +55,12 @@
       link: 'http://www.guiadigital.com.ar',
     },
     {
-      title: 'Proyecto 2',
+      title: 'J-Cordero',
       description: 'Descripción breve del segundo proyecto.',
       image: 'https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png',
       link: 'http://www.proyecto2.com',
     },
-    {
-      title: 'Proyecto 3',
-      description: 'Descripción breve del tercer proyecto.',
-      image: 'https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png',
-      link: 'http://www.proyecto3.com',
-    },
+  
   ]);
   </script>
   

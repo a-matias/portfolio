@@ -4,7 +4,7 @@
         v-scroll="'fade-in'"
         class="opacity-0 transition-all duration-500 text-center justify-between"
       >
-      <h2 class="text-3xl font-semibold mb-4">Mis proyectos</h2>
+      <h2 class="tittleProject text-3xl font-semibold mb-4">Mis Proyectos</h2>
       
       <div class="flex items-center justify-around space-x-4">
    
@@ -22,6 +22,13 @@ import CardComponent from './CardComponent.vue'
 </script>
   
 <style scoped>
+.tittleProject{
+  font-family: "Major Mono Display", serif;
+  font-weight: 600;
+  font-style: normal;
+  
+}
+
 
 </style>
   

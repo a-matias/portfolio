@@ -1,8 +1,8 @@
 <template>
 
   <div class="navBar">
-    <div class="nombre flex-shrink-0 text-2xl font-bold text-gray-700">
-      <font-awesome-icon :icon="['fas', 'code']" />
+    <div class="containerLogo">
+      <img :src="logo" alt="Logo" class="logo" />
     </div>
     <div class="containerLinks">
       <a class="links" href="#projects" @click.prevent="scrollToSection('about')">About</a>
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import logo from '@/assets/logo.svg'; // Importa el archivo SVG
 
 function scrollToSection(sectionId: string): void {
   const section = document.getElementById(sectionId);
@@ -34,42 +34,46 @@ html {
   scroll-behavior: smooth; /* Suaviza el scroll en navegadores compatibles */
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.nombre{
-  font-family: "Cairo Play", serif;
-  font-size: 30px;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
-}
-
 .navBar{
   display: flex; 
   align-items: center;
-
-
+  padding-left: 5vw;
+  padding-right: 5vw;
+  /*background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: screen;*/
 }
+
+.containerLogo{
+  display: flex;
+  width: 15vw;
+  justify-content: center;
+}
+
 .containerLinks{
   display: flex;
-  width: 80vw;
+  width: 75vw;
   justify-content:flex-end;
 }
+
 .links{
-  font-family: "Cairo Play", serif;
-  font-size: 22px;
+  font-family: "Be Vietnam Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
   color: #17202a;
   padding: 10px;
   margin-right: 10px;
 }
 
 .links:hover{
- color: #b700ff;
+ color: #a61add;
+ transition: 0.2s;
+}
+
+
+.logo {
+  width: 120px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
 }
 
 </style>

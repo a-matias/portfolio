@@ -65,7 +65,6 @@ typewriterEffect();
   font-weight: 400;
   font-size: 30px;
   font-style: normal;
-
 }
 
 img{
@@ -75,7 +74,6 @@ img{
 .containerSocialNetwork{
   display: flex;
   justify-content: center;
-
 }
 
 .containerPic{

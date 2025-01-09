@@ -1,24 +1,23 @@
 <template>
   <div id="app">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-white shadow-md z-10">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
-          <NavbarComponent />
-        </div>
-      </div>
+    <nav class="shadow-md z-10">
+      <NavbarComponent />
     </nav>
 
     <!-- Home Section -->
-    <HomeComponent id="about" />
+    <HomeComponent id="home" />
 
-    <!-- About Section -->
+    <div class="min-h-screen flex items-center">
+
+      <StackComponent id="stack" />
+
+      <AboutComponent id="about" />
+
+    </div>
+    
     <ProjectsComponent id="projects" />
 
-    <!-- About Section -->
-    <AboutComponent id="stack" />
-
-    <!-- Footer Section -->
     <FooterComponent />
    
   </div>
@@ -29,27 +28,25 @@ import HomeComponent from '@/components/HomeComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 import NavbarComponent from '@/components/NavbarComponent.vue' ;
-import ProjectsComponent from './components/ProjectsComponent.vue';
+import ProjectsComponent from '@/components/ProjectsComponent.vue';
+import StackComponent from '@/components/StackComponent.vue';
 
 </script>
 
 <style lang="scss">
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  align-content: center;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
 html, body {
   margin: 0;
+  padding: 0;
   height: 100%;
+  width: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
 }
 
 section {
