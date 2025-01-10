@@ -22,19 +22,23 @@
   
   <script lang="ts" setup>
   import { ref } from 'vue';
-  
+
   // Lista de tecnologías
   const technologies = ref([
-    { name: 'HTML', icon: require('@/assets/icons/html.svg') },
+    { name: 'HTML', icon: require('@/assets/icons/html.svg'), },
     { name: 'CSS', icon: require('@/assets/icons/css.svg') },
-    { name: 'JavaScript', icon: require('@/assets/icons/javascript.svg') },
+    { name: 'Laravel', icon: require('@/assets/icons/laravel.svg') },
+
     { name: 'Vue.js', icon: require('@/assets/icons/vue.svg') },
+    { name: 'TypeScript', icon: require('@/assets/icons/typescript.svg') },
+    { name: 'JavaScript', icon: require('@/assets/icons/javascript.svg') },
+
     { name: 'Node.js', icon: require('@/assets/icons/node.svg') },
     { name: 'MySQL', icon: require('@/assets/icons/mysql.svg') },
     { name: 'Git', icon: require('@/assets/icons/git.svg') },
-    { name: 'Bootstrap', icon: require('@/assets/icons/bootstrap.svg') },
-    { name: 'Laravel', icon: require('@/assets/icons/laravel.svg') },
+   
     { name: 'Sass', icon: require('@/assets/icons/sass.svg') },
+    { name: 'Bootstrap', icon: require('@/assets/icons/bootstrap.svg') },
     { name: 'Tailwind', icon: require('@/assets/icons/tailwind.svg') },
   ]);
   
@@ -50,9 +54,7 @@
     align-content: flex-start;
     width: 50vw;
     height: 100vh;
-    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%) !important;
     }
-
 
   .section-title {
     font-family: "Be Vietnam Pro", serif;
@@ -61,15 +63,14 @@
     font-style: normal;
     font-size: 2.5rem;
     margin-bottom: 30px;
-
   }
   
   .stackFlex {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
   }
   
   .stack-card {
@@ -87,14 +88,13 @@
   
   .stack-card:hover {
     transform: scale(1.1);
-    border-color: #b700ff;
+    border-color: #fe9999ef;
   }
   
   .tech-icon {
     width: 50px;
     height: 50px;
   }
-
 
   .tech-name {
     margin-top: 10px;

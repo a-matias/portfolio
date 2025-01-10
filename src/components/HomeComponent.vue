@@ -1,12 +1,12 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center" id="home">
-      <div v-scroll="'fade-in'" class="containerHome  opacity-0 transition-all duration-500 text-center">
+    <section class="min-h-screen flex justify-center" id="home">
+      <div v-scroll="'fade-in'" class="containerHome opacity-0 transition-all duration-500 text-center">
         <div class="containerPic">
           <img :src="logoUrl" alt="logo" />
         </div>
 
-          <h1 class="nombre">{{ displayedMessage }}<span class="blinking-cursor">|</span></h1>
-
+        <h1 class="nombre typewrite">{{ displayedMessage }}<span class="blinking-cursor">|</span></h1>
+        
         <div class="containerSocialNetwork">
           <SocialNetworkComponent />
         </div>
@@ -24,6 +24,7 @@ import SocialNetworkComponent from './SocialNetworkComponent.vue'
 const message: Ref<string> = ref('¡Hola! Soy Matías Andrés..');
 const displayedMessage: Ref<string> = ref('');
 //const description: Ref<string> = ref('Analista en Sistemas');
+
 const logoUrl: Ref<string> = ref(logo);
 
   const typewriterEffect = () => {
@@ -46,26 +47,21 @@ typewriterEffect();
   
 <style scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo+Play&family=Diphylleia&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 .containerHome{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   width: 40vw;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 30px;
-  border-radius: 50px;
-  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
-  
+  border-radius: 50px; 
 }
 
 .nombre{
-  font-family: "Poppins", serif;
-  font-weight: 400;
-  font-size: 30px;
-  font-style: normal;
+  font-family: "Be Vietnam Pro", serif;
+  font-size: 3em;
+  font-style:normal;
+  font-weight: bolder;
 }
 
 img{
