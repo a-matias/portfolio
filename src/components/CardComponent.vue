@@ -63,8 +63,7 @@
 
   .capsuleCard{
     display: flex;
-    background: url('/src/assets/backgroundCard.svg') no-repeat center center fixed;
-    background-size:cover;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     border-radius: 10px;
     width: 20vw;
     padding: 2vw;
@@ -120,7 +119,7 @@
 
     .card:hover{
       transform: scale(1.1);
-      transition: 0.4s;
+      transition: 0.3s;
       box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
       cursor: pointer;
     }
