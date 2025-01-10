@@ -1,11 +1,8 @@
 <template>
   <div id="app">
     <!-- Navbar -->
-    <nav class="shadow-md z-10">
       <NavbarComponent />
-    </nav>
 
-    <!-- Home Section -->
     <HomeComponent id="home" />
 
     <div class="containerStackAbout min-h-screen flex items-center">
@@ -35,12 +32,10 @@ import StackComponent from '@/components/StackComponent.vue';
 
 <style lang="scss">
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+main {
+  margin-top: 80px; /* Ajusta este valor según la altura de la barra de navegación */
 }
+
 
 #app {
   display: flex;
@@ -55,7 +50,6 @@ html, body {
     flex-direction: column;
   }
 }
-
 
 section {
   padding: 50px 0; 

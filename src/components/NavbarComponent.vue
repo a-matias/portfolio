@@ -1,22 +1,26 @@
 <template>
-
-  <div class="navBar">
+  <div :class="['navBar', isScrolled ? 'scrolled' : '']">
     <div class="containerLogo">
       <img :src="logo" alt="Logo" class="logo" />
     </div>
     <div class="containerLinks">
-      <a class="links" href="#projects" @click.prevent="scrollToSection('about')">About</a>
-      <a class="links" href="#projects" @click.prevent="scrollToSection('projects')">Mis proyectos</a>
+      <a class="links" href="#home" @click.prevent="scrollToSection('home')">Home</a>
+      <a class="links" href="#about" @click.prevent="scrollToSection('about')">About</a>
       <a class="links" href="#stack" @click.prevent="scrollToSection('stack')">Stack</a>
+      <a class="links" href="#projects" @click.prevent="scrollToSection('projects')">Projects</a>
     </div>
-
-    
   </div>
-
 </template>
 
 <script lang="ts" setup>
-import logo from '@/assets/logo.svg'; // Importa el archivo SVG
+import { ref, onMounted, onUnmounted } from 'vue';
+import logo from '@/assets/logo.svg';
+
+const isScrolled = ref(false);
+
+function handleScroll(): void {
+  isScrolled.value = window.scrollY > 50; // Cambia a true si se scrollea más de 50px
+}
 
 function scrollToSection(sectionId: string): void {
   const section = document.getElementById(sectionId);
@@ -25,36 +29,49 @@ function scrollToSection(sectionId: string): void {
   }
 }
 
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Cairo+Play&family=Diphylleia&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-html {
-  scroll-behavior: smooth; /* Suaviza el scroll en navegadores compatibles */
-}
-
-.navBar{
-  display: flex; 
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
   align-items: center;
   padding-left: 5vw;
   padding-right: 5vw;
   background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Altura inicial */
+  transition: height 0.3s ease-in-out; /* Transición suave para cambios de altura */
 }
 
-.containerLogo{
+.navBar.scrolled {
+  height: 50px; /* Altura reducida al hacer scroll */
+}
+
+.containerLogo {
   display: flex;
   width: 15vw;
   justify-content: center;
 }
 
-.containerLinks{
+.containerLinks {
   display: flex;
   width: 75vw;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
-.links{
+.links {
   font-family: "Be Vietnam Pro", serif;
   font-weight: 400;
   font-style: normal;
@@ -64,16 +81,18 @@ html {
   margin-right: 10px;
 }
 
-.links:hover{
- color: #a61add;
- transition: 0.2s;
+.links:hover {
+  color: #a61add;
+  transition: 0.2s;
 }
-
 
 .logo {
-  width: 120px; /* Ajusta el tamaño según sea necesario */
+  width: 100px;
   height: auto;
+  transition: width 0.3s ease-in-out; /* También puedes reducir el tamaño del logo */
 }
 
+.navBar.scrolled .logo {
+  width: 60px; /* Tamaño reducido del logo */
+}
 </style>
-

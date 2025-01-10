@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen flex justify-center" id="home">
+    <section class="bg-gradient-to-b from-[#858585]  to-[#ffffff]  h-screen min-h-screen flex justify-center z-40" id="home">
       <div v-scroll="'fade-in'" class="containerHome opacity-0 transition-all duration-500 text-center">
         <div class="containerPic">
           <img :src="logoUrl" alt="logo" />
@@ -51,16 +51,20 @@ typewriterEffect();
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 5rem;
+  background-color:#fff;
   width: 40vw;
+  height: 65vh;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 30px;
   border-radius: 50px; 
+  
 }
 
 .nombre{
   font-family: "Be Vietnam Pro", serif;
-  font-size: 3em;
-  font-style:normal;
+  font-size: 2.5em;
+  font-style: normal;
   font-weight: bolder;
 }
 

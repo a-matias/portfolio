@@ -52,18 +52,18 @@
       background-color:rgb(27, 27, 26);
       color:aliceblue;
       transition: 0.4s;
+      cursor: pointer;
   }
 
   @media (max-width: 576px) {
 
     .ContainerIcons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 50vw;   
-    height: 10vh;
-    align-items:flex-end;
-
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 50vw;   
+      height: 10vh;
+      align-items:flex-end;
     }
 
     .iconSocial {

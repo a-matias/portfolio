@@ -4,26 +4,23 @@
     
     <div class="capsuleCard" v-for="(card, index) in cards" :key="index">
 
-      <div  class="card">
-
-        <a :href="card.link">
+      <div class="card">
+        <a :href="card.link" target="_blank" rel="noopener noreferrer">
           <img class="rounded-t-lg" :src="card.image" alt="Card image" />
         </a>
         <div class="p-5">
-          <a :href="card.link">
+          <a :href="card.link" target="_blank" rel="noopener noreferrer">
             <h5 class="mb-2 text-2xl font-bold tracking-tight">
               {{ card.title }}
             </h5>
           </a>
-          <p class="mb-5 text-justify">
+          <p class="mb-5 text-justify" target="_blank" rel="noopener noreferrer">
             {{ card.description }}
           </p>
         </div>
-
       </div>
-
+      
     </div>
-
   </div>
 
 </template>
@@ -44,7 +41,7 @@
       title: 'J-Cordero',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo incidunt temporibus quibusdam odio! Dignissimos!',
       image: 'https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png',
-      link: 'http://www.proyecto2.com',
+      link: 'https:www.j-cordero.com.ar',
     },
 
   ]);
@@ -58,7 +55,6 @@
     padding: 2rem;
     height: 65vh;
     justify-content: space-around;
-
   }
 
   .capsuleCard{

@@ -8,20 +8,14 @@
       </div>
     </section>
 </template>
-  
+
 <script lang="ts" setup>
 import { Ref, ref } from 'vue'
   
     const description :Ref<string> = ref(`
-      ¡Hola! Soy Matías Andrés, un analista en sistemas apasionado por el desarrollo de software.
-      Actualmente, me desempeño como analista funcional en CNRT (Comisión Nacional de Regulación del Transporte), donde desempeño un papel integral en el ciclo de vida del desarrollo de software.
-      Algunas de mis actividades en la organización son:
-        Testing y aseguramiento de calidad de aplicaciones y servicios web.
-        Desarrollo de documentación para APIs REST.
-        Optimización de consultas en bases de datos relacionales para mejorar eficiencia e integridad de datos.
-        Captura y análisis de requisitos de proyectos de software mediante entrevistas con stakeholders, análisis de documentación y colaboración estrecha con el equipo de desarrollo.
-        Diseño de interfaces web intuitivas y centradas en la experiencia del usuario.
-      
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, commodi impedit dolores amet officiis veritatis 
+        dolorum voluptate, itaque nisi officia vero deserunt totam architecto suscipit rem dolorem fugit porro! Autem unde at maiores.
+        Ut fugiat illo quas odio quo officia, nesciunt in ipsum culpa quod.
     `);
   
       
