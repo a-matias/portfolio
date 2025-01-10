@@ -1,6 +1,6 @@
 <template>
     <section class="min-h-screen flex items-center justify-center" id="home">
-      <div v-scroll="'fade-in'" class="containerHome opacity-0 transition-all duration-500 text-center">
+      <div v-scroll="'fade-in'" class="containerHome  opacity-0 transition-all duration-500 text-center">
         <div class="containerPic">
           <img :src="logoUrl" alt="logo" />
         </div>
@@ -57,6 +57,7 @@ typewriterEffect();
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 30px;
   border-radius: 50px;
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
   
 }
 

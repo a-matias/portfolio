@@ -8,7 +8,7 @@
     <!-- Home Section -->
     <HomeComponent id="home" />
 
-    <div class="min-h-screen flex items-center">
+    <div class="containerStackAbout min-h-screen flex items-center">
 
       <StackComponent id="stack" />
 
@@ -48,6 +48,14 @@ html, body {
   align-content: center;
   text-align: center;
 }
+
+@media  (max-width: 576px) {
+  .containerStackAbout{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 section {
   padding: 50px 0; 

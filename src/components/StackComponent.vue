@@ -47,6 +47,7 @@
   .container {
     display: grid;
     justify-content: center;
+    align-content: flex-start;
     width: 50vw;
     height: 100vh;
     }
@@ -92,7 +93,8 @@
     width: 50px;
     height: 50px;
   }
-  
+
+
   .tech-name {
     margin-top: 10px;
     font-size: 1rem;
@@ -104,5 +106,24 @@
   .tech-name.visible {
     opacity: 1;
   }
+
+
+  @media  (max-width: 576px) {
+
+    .stackFlex {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+
+    .stack-card {
+      width: 100px;
+      height: 100px;
+
+    }
+  }
+
   </style>
   

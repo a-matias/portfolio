@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center bg-slate-100" id="about">
+    <section class="min-h-screen flex items-center justify-center" id="about">
       <div
         v-scroll="'fade-in'"
         class="opacity-0 transition-all duration-500 text-center justify-between"
