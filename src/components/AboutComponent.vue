@@ -17,13 +17,11 @@ import { Ref, ref } from 'vue'
         dolorum voluptate, itaque nisi officia vero deserunt totam architecto suscipit rem dolorem fugit porro! Autem unde at maiores.
         Ut fugiat illo quas odio quo officia, nesciunt in ipsum culpa quod.
     `);
-  
-      
+
 
   </script>
   
   <style scoped>
-  /* Estilos para la sección de About */
 
   .container{
     display: flex;
@@ -44,10 +42,10 @@ import { Ref, ref } from 'vue'
 
   .cardAbout{
     width: 30vw;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 20px;
-    background-color: antiquewhite;
-
+    box-shadow: rgb(255, 255, 255) 0px 10px 10px -10px;
+    font-weight: 600;
   }
 
   @media (max-width: 576px) {
@@ -61,7 +59,6 @@ import { Ref, ref } from 'vue'
     .cardAbout{
       width: 90vw;
       border-radius: 15px;
-
     }
   }
 
