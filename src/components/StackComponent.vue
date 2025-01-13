@@ -2,7 +2,7 @@
     <section class="container flex items-center justify-center" id="stack">
         <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center justify-between">
             
-            <h2 class="section-title">Mi Stack Tecnológico</h2>
+            <h2 class="section-title">TECNOLOGÍAS QUE ME IMPULSAN</h2>
             
             <div class="stackFlex">
                 <div class="stack-card"
@@ -51,31 +51,32 @@
   .container {
     display: grid;
     justify-content: center;
-    align-content: flex-start;
+    align-content: center;
     width: 50vw;
     height: 100vh;
     }
 
   .section-title {
     font-family: "Be Vietnam Pro", serif;
-    font-weight: 400;
-    align-items: flex-start;
+    font-weight: 1000;
+    align-items: center;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
   }
   
   .stackFlex {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 2rem;
   }
   
   .stack-card {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;

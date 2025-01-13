@@ -1,66 +1,111 @@
 <template>
-    <section class="container" id="about">
-      <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center justify-between">
-        
-        <h2 class="section-title">Acerca de mí</h2>
-        <p class="cardAbout shadow-md text-justify border">{{ description }}</p>
-              
+  <section class="container bg-slate-100" id="about">
+    <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-50 text-center justify-between">
+      <div class="cardAbout">
+        <p id="typewriter"></p>
       </div>
-    </section>
+    
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
-import { Ref, ref } from 'vue'
+import { onMounted } from 'vue';
+import Typewriter from 'typewriter-effect/dist/core';
+
+// Inicialización del typewriter
+const initializeTypewriter = () => {
+  const element = document.getElementById('typewriter');
+  if (element) {
+    const typewriter = new Typewriter(element, {
+      loop: false,
+      delay: 25,
+      
+    });
+
+    typewriter
+    .typeString('{ <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Profesión": "Analista en Sistemas - Desarrollador", <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Pasión": "Desarrollo tecnológico", <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": "Bases de datos, APIs REST, Full Stack", <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": "Gestiono plataformas web", <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Tecnologías": [ <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"JavaScript": "Desarrollo Web"}, <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Vue.js": "Frontend"}, <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Laravel": "Backend"}, <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;], <br>')
+    .pauseFor(50)
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Meta": "Innovación digital", <br>')
+    .pauseFor(2000)
+    .typeString('} <br>')
+    .start();
+
+
+
+
+  }
+};
+
+// Asegúrate de que el DOM esté montado antes de ejecutar Typewriter
+onMounted(() => {
+  initializeTypewriter();
+});
+</script>
+
+<style scoped>
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  background-color: #1A2140 ;
   
-    const description :Ref<string> = ref(`
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, commodi impedit dolores amet officiis veritatis 
-        dolorum voluptate, itaque nisi officia vero deserunt totam architecto suscipit rem dolorem fugit porro! Autem unde at maiores.
-        Ut fugiat illo quas odio quo officia, nesciunt in ipsum culpa quod.
-    `);
+}
 
+.cardAbout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45vw;
+  border-radius: 20px;
+  padding: 30px;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+}
 
-  </script>
-  
-  <style scoped>
+#typewriter{
+  font-family: "Cutive", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+}
 
-  .container{
+@media (max-width: 576px) {
+  .container {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    width: 50vw;
+    width: 100vw;
     height: 100vh;
   }
 
-  .section-title{
-    font-family: "Be Vietnam Pro", serif;
-    font-weight: 400;
-    align-items: flex-start;
-    font-style: normal;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-
-  .cardAbout{
-    width: 30vw;
+  .cardAbout {
+    width: 100vw;
     border-radius: 15px;
-    padding: 20px;
-    box-shadow: rgb(255, 255, 255) 0px 10px 10px -10px;
-    font-weight: 600;
   }
 
-  @media (max-width: 576px) {
-    .container{
-      display: flex;
-      justify-content: center;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    .cardAbout{
-      width: 90vw;
-      border-radius: 15px;
-    }
+  #typewriter{
+    font-size: 1em;
   }
-
-  </style>
-  
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
-    <section class="min-h-screen flex items-center justify-center" id="about">
+    <section class="min-h-screen flex items-center" id="about">
       <div
         v-scroll="'fade-in'"
-        class="opacity-0 transition-all duration-500 text-center justify-between"
+        class="opacity-0 transition-all duration-500 text-center"
       >
       <h2 class="tittleProject">Trabajos realizados</h2>
       
@@ -22,14 +22,11 @@ import CardComponent from './CardComponent.vue'
   
 <style scoped>
 
-
-
   .tittleProject{
     font-family: "Be Vietnam Pro", serif;
     font-size: 2.5rem;
     font-style:normal;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    font-weight: 1000;
   }
 
   @media (max-width: 576px) {

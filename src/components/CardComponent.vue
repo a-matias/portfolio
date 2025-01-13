@@ -51,10 +51,12 @@
 
   .containerCard{
     display: flex;
-    width: 75vw;
+    align-content: center;
+    justify-content:space-evenly;
+    width: 50vw;
     padding: 2rem;
     height: 65vh;
-    justify-content: space-around;
+
   }
 
   .capsuleCard{
@@ -63,7 +65,7 @@
     border-radius: 10px;
     width: 20vw;
     padding: 2vw;
-    margin: 5px;
+    
   }
 
   .card{

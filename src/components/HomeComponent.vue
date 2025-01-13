@@ -1,11 +1,11 @@
 <template>
-    <section class="bg-gradient-to-b from-[#858585]  to-[#ffffff]  h-screen min-h-screen flex justify-center z-40" id="home">
-      <div v-scroll="'fade-in'" class="containerHome opacity-0 transition-all duration-500 text-center">
+    <section class="cont h-screen min-h-screen flex justify-center z-40" id="home">
+      <div class="containerHome opacity-0 transition-all duration-500 text-center" v-scroll="'fade-in'">
         <div class="containerPic">
           <img :src="logoUrl" alt="logo" />
         </div>
 
-        <h1 class="nombre typewrite">{{ displayedMessage }}<span class="blinking-cursor">|</span></h1>
+        <h1 class="nombre typewrite">{{ displayedMessage }}<span class="blinking-cursor"></span></h1>
         
         <div class="containerSocialNetwork">
           <SocialNetworkComponent />
@@ -29,7 +29,7 @@ const logoUrl: Ref<string> = ref(logo);
 
   const typewriterEffect = () => {
   let index = 0;
-  const speed = 100; // Velocidad en milisegundos entre cada letra
+  const speed = 0; // Velocidad en milisegundos entre cada letra
   const type = () => {
     if (index < message.value.length) {
       displayedMessage.value += message.value[index];
@@ -47,25 +47,32 @@ typewriterEffect();
   
 <style scoped>
 
+.cont{
+  background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+}
+
+
 .containerHome{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 5rem;
+  align-content: center;
+  margin: 5rem;
   background-color:#fff;
   width: 40vw;
-  height: 65vh;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 30px;
-  border-radius: 50px; 
+  border-radius: 20px; 
   
 }
 
 .nombre{
   font-family: "Be Vietnam Pro", serif;
-  font-size: 2.5em;
+  font-size: 2em;
   font-style: normal;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 img{
@@ -115,17 +122,33 @@ animation: blink 1s steps(2, start) infinite;
 }
 
 @media (max-width: 576px) {
+
+  .cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+    }
+
   .containerHome {
-    width: 85vw; 
-    border-radius: 0;
-    align-content:flex-start;
-    box-shadow: none;
-    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem;
+    background-color:#fff;
+    width: 90vw;
+    height: 60vh;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 5px;
+    border-radius: 20px; 
 
   }
 
   .nombre{
-  font-size: 25px;
+    font-size: 1.5rem;
   }
 
   img{
