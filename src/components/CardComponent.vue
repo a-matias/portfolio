@@ -61,18 +61,18 @@
 
   .capsuleCard{
     display: flex;
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    background-color: #ffffff;
     border-radius: 10px;
     width: 20vw;
     padding: 2vw;
-    
   }
 
   .card{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 20vw;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 10px;
     transition: scale(0);

@@ -25,19 +25,20 @@
 
   // Lista de tecnologías
   const technologies = ref([
-    { name: 'HTML', icon: require('@/assets/icons/html.svg'), },
-    { name: 'CSS', icon: require('@/assets/icons/css.svg') },
+
+    { name: 'Sass', icon: require('@/assets/icons/sass.svg') },
+    { name: 'Vue.js', icon: require('@/assets/icons/vue.svg') },
     { name: 'Laravel', icon: require('@/assets/icons/laravel.svg') },
 
-    { name: 'Vue.js', icon: require('@/assets/icons/vue.svg') },
     { name: 'TypeScript', icon: require('@/assets/icons/typescript.svg') },
     { name: 'JavaScript', icon: require('@/assets/icons/javascript.svg') },
-
     { name: 'Node.js', icon: require('@/assets/icons/node.svg') },
+    
     { name: 'MySQL', icon: require('@/assets/icons/mysql.svg') },
     { name: 'Git', icon: require('@/assets/icons/git.svg') },
    
-    { name: 'Sass', icon: require('@/assets/icons/sass.svg') },
+    { name: 'HTML', icon: require('@/assets/icons/html.svg'), },
+    { name: 'CSS', icon: require('@/assets/icons/css.svg') },
     { name: 'Bootstrap', icon: require('@/assets/icons/bootstrap.svg') },
     { name: 'Tailwind', icon: require('@/assets/icons/tailwind.svg') },
   ]);
@@ -53,7 +54,7 @@
     width: 50vw;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-color: #ffffff;
   }
 
   .stackFlex {
