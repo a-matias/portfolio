@@ -1,10 +1,8 @@
 <template>
     <section class="container" id="about">
-      <div
-        v-scroll="'fade-in'"
-        class="opacity-0 transition-all duration-500 text-center"
-      >
-      <h2 class="tittleProject">Trabajos realizados</h2>
+      <div class="opacity-0 transition-all duration-500 text-center" v-scroll="'fade-in'">
+      
+        <h2 class="sectionTitle">Proyectos realizados</h2>
       
       <div class="flex items-center">
           <CardComponent/>
@@ -30,12 +28,14 @@ import CardComponent from './CardComponent.vue'
     background-color: #1A2140;
   }
 
-  .tittleProject{
+  .sectionTitle {
     font-family: "Be Vietnam Pro", serif;
-    font-size: 2.5rem;
-    font-style:normal;
     font-weight: 1000;
     color: #ffffff;
+    text-align: center;
+    font-style: normal;
+    font-size: 3rem;
+    margin-bottom: 30px;
   }
 
   @media (max-width: 576px) {

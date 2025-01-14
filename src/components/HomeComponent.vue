@@ -70,9 +70,9 @@ typewriterEffect();
 
 .nombre{
   font-family: "Be Vietnam Pro", serif;
-    font-size: 2.5rem;
-    font-style:normal;
-    font-weight: 1000;
+  font-size: 2.5rem;
+  font-style:normal;
+  font-weight: 900;
 }
 
 img{

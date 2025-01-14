@@ -1,10 +1,10 @@
 <template>
     <section class="container" id="stack">
-        <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center justify-between">
+        <div class="opacity-0 transition-all duration-500 text-center justify-between" v-scroll="'fade-in'">
             
-            <h2 class="section-title">TECNOLOGÍAS QUE ME IMPULSAN</h2>
+            <h2 class="sectionTitle">Stack tecnológico</h2>
             
-            <div class="stackFlex">
+            <div class="stackGrid">
                 <div class="stack-card"
                 v-for="(tech, index) in technologies"
                 :key="index"
@@ -57,21 +57,20 @@
     background-color: #ffffff;
   }
 
-  .stackFlex {
+  .stackGrid {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    height: 60vh;
   }
 
-  .section-title {
+  .sectionTitle {
     font-family: "Be Vietnam Pro", serif;
     font-weight: 1000;
     text-align: center;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 30px;
   }
     
@@ -113,12 +112,30 @@
 
   @media  (max-width: 576px) {
 
-    .stackFlex {
+    .container {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+      }
+
+    .stackGrid {
       display: grid;
+      justify-items: center;
+      align-items: center;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .sectionTitle {
+      font-family: "Be Vietnam Pro", serif;
+      font-weight: 1000;
+      text-align: center;
+      font-style: normal;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
     }
 
     .stack-card {
