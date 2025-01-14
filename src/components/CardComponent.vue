@@ -98,22 +98,21 @@
 
     .capsuleCard{
       display: flex;
+      background-color: none !important;
       flex-direction: column;
       justify-content: center;
-      background-image: none;
-      height: 100vh;
-      width: 100vw;
+      width: 1px;
+      height: 1px;
     }
 
     .card{
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    height: 50vh;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      width: 80vw;
 
     }
 

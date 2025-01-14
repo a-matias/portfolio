@@ -47,7 +47,6 @@ typewriterEffect();
   
 <style scoped>
 
-
 .container{
   display: flex;
   width: 50vw;
@@ -122,14 +121,15 @@ img{
 
 @media (max-width: 576px) {
 
-  .cont{
+  .container{
     display: flex;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: #FBAB7E;
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-
-    }
+  }
 
   .containerHome {
     display: flex;
