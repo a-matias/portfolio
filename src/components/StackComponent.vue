@@ -1,5 +1,5 @@
 <template>
-    <section class="container flex items-center justify-center" id="stack">
+    <section class="container" id="stack">
         <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-500 text-center justify-between">
             
             <h2 class="section-title">TECNOLOGÍAS QUE ME IMPULSAN</h2>
@@ -50,30 +50,30 @@
   
   .container {
     display: grid;
-    justify-content: center;
-    align-content: center;
     width: 50vw;
-    height: 100vh;
-    }
-
-  .section-title {
-    font-family: "Be Vietnam Pro", serif;
-    font-weight: 1000;
     align-items: center;
-    font-style: normal;
-    font-size: 2rem;
-    margin-bottom: 30px;
+    justify-content: center;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   }
-  
+
   .stackFlex {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding: 2rem;
   }
-  
+
+  .section-title {
+    font-family: "Be Vietnam Pro", serif;
+    font-weight: 1000;
+    text-align: center;
+    font-style: normal;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+    
   .stack-card {
     width: 100px;
     height: 100px;

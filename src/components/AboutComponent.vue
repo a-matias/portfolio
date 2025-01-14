@@ -45,8 +45,8 @@ const initializeTypewriter = () => {
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;], <br>')
     .pauseFor(50)
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Meta": "Innovación digital", <br>')
-    .pauseFor(2000)
-    .typeString('} <br>')
+    .pauseFor(50)
+    .typeString('}')
     .start();
 
 
@@ -65,18 +65,18 @@ onMounted(() => {
 
 .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 50vw;
-  background-color: #1A2140 ;
-  
+  justify-content: center;
+  align-items: center;  
+  background-color: #1A2140;
 }
 
 .cardAbout {
   display: flex;
+  width: 40vw;
   align-items: center;
   justify-content: center;
-  width: 45vw;
+  
   border-radius: 20px;
   padding: 30px;
   font-weight: 400;
@@ -107,5 +107,6 @@ onMounted(() => {
   #typewriter{
     font-size: 1em;
   }
+
 }
 </style>

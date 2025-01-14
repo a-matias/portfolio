@@ -3,7 +3,7 @@
     <!-- Navbar -->
       <NavbarComponent />
 
-      <div class="containerStackProject min-h-screen flex">
+      <div class="containerComponent min-h-screen flex">
 
         <HomeComponent id="home" />
 
@@ -11,17 +11,13 @@
 
       </div>
 
-    <div class="containerStackProject min-h-screen flex items-center">
+    <div class="containerComponent min-h-screen flex">
 
       <StackComponent id="stack" />
 
       <ProjectsComponent id="projects" />
 
     </div>
-
-
-    
-    
 
     <FooterComponent />
    
@@ -52,7 +48,7 @@ main {
   text-align: center;
 }
 
-.containerStackProject{
+.containerComponent{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -60,7 +56,7 @@ main {
 }
 
 @media  (max-width: 576px) {
-  .containerStackProject{
+  .containerComponent{
     display: flex;
     flex-direction: column;
   }

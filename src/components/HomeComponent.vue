@@ -1,5 +1,5 @@
 <template>
-    <section class="cont h-screen min-h-screen flex justify-center z-40" id="home">
+    <section class="container" id="home">
       <div class="containerHome opacity-0 transition-all duration-500 text-center" v-scroll="'fade-in'">
         <div class="containerPic">
           <img :src="logoUrl" alt="logo" />
@@ -47,32 +47,32 @@ typewriterEffect();
   
 <style scoped>
 
-.cont{
+
+.container{
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
   background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
-
 
 .containerHome{
   display: flex;
+  width: 40vw;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  margin: 5rem;
   background-color:#fff;
-  width: 40vw;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 30px;
   border-radius: 20px; 
-  
 }
 
 .nombre{
   font-family: "Be Vietnam Pro", serif;
-  font-size: 2em;
-  font-style: normal;
-  font-weight: bold;
+    font-size: 2.5rem;
+    font-style:normal;
+    font-weight: 1000;
 }
 
 img{
@@ -89,13 +89,12 @@ img{
   justify-content: center;
 }
 
-
 .blinking-cursor {
-display: inline-block;
-animation: blink 1s steps(2, start) infinite;
+  display: inline-block;
+  animation: blink 1s steps(2, start) infinite;
 }
 
-  @keyframes blink {
+@keyframes blink {
   to {
     visibility: hidden;
   }

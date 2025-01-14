@@ -52,10 +52,10 @@
   .containerCard{
     display: flex;
     align-content: center;
-    justify-content:space-evenly;
-    width: 50vw;
-    padding: 2rem;
-    height: 65vh;
+    justify-content:space-around;
+    width: 45vw;
+    padding: 1.5rem;
+    height: 60vh;
 
   }
 
