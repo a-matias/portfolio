@@ -1,6 +1,6 @@
 <template>
   <section class="container bg-slate-100" id="about">
-    <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-50 text-center justify-between">
+    <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-60 text-center justify-between">
       <div class="cardAbout">
         <p id="typewriter"></p>
       </div>
@@ -19,33 +19,45 @@ const initializeTypewriter = () => {
   if (element) {
     const typewriter = new Typewriter(element, {
       loop: false,
-      delay: 25,
+      delay: 30,
+      
       
     });
 
     typewriter
     .typeString('{ <br>')
-    .pauseFor(50)
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Profesión": "Analista en Sistemas - Desarrollador", <br>')
-    .pauseFor(50)
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Profesión": "Analista en Sistemas - Desarrollador Web", <br>')
+    .pauseFor(60)
+
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Pasión": "Desarrollo tecnológico", <br>')
-    .pauseFor(50)
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": "Bases de datos, APIs REST, Full Stack", <br>')
-    .pauseFor(50)
+    .pauseFor(60)
+   
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": "Gestiono plataformas web", <br>')
-    .pauseFor(50)
+    .pauseFor(60)
+
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Tecnologías": [ <br>')
-    .pauseFor(50)
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"JavaScript": "Desarrollo Web"}, <br>')
-    .pauseFor(50)
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Vue.js": "Frontend"}, <br>')
-    .pauseFor(50)
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Laravel": "Backend"}, <br>')
-    .pauseFor(50)
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"JavaScript": "Desarrollo Web"}, <br>')
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Vue.js": "Frontend"}, <br>')
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Laravel": "Backend"}, <br>')
+    .pauseFor(60)
+
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;], <br>')
-    .pauseFor(50)
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": "Bases de datos, APIs REST", <br>')
+    .pauseFor(60)
+
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Meta": "Innovación digital", <br>')
-    .pauseFor(50)
+    .pauseFor(60)
+
     .typeString('}')
     .start();
 
@@ -73,39 +85,46 @@ onMounted(() => {
 
 .cardAbout {
   display: flex;
-  width: 40vw;
+  width: 45vw;
   align-items: center;
   justify-content: center;
-  
   border-radius: 20px;
   padding: 30px;
   font-weight: 400;
   text-align: left;
   color: #ffffff;
+  background-color: #111529;
 }
 
 #typewriter{
   font-family: "Cutive", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1.3em;
+ 
 }
+
 
 @media (max-width: 576px) {
   .container {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     width: 100vw;
     height: 100vh;
   }
 
   .cardAbout {
-    width: 100vw;
-    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    /*background-color: #1f274b;*/
+    background-color: #111529;
   }
 
   #typewriter{
-    font-size: 1em;
+    font-size: 0.8em;
+
   }
 
 }
