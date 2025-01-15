@@ -1,0 +1,26 @@
+image: node:18
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - npm install
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+pages:
+  stage: deploy
+  script:
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # O la rama que elijas para desplegar

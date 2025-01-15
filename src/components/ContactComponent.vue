@@ -1,5 +1,6 @@
 <template>
   <div class="container min-w-full" id="contact">
+    
     <!-- Logo -->
     <div class="logo">
       <img src="@/assets/email.svg" alt="Email" />
@@ -8,9 +9,10 @@
 
     <!-- Formulario -->
     <div class="form">
+      <h2 class="sectionTitle">Contactame</h2>  
       <form @submit.prevent="handleSubmit">
         <div class="mb-4">
-          <label for="name" class="block text-sm font-medium">Nombre</label>
+          <label for="name" class="flex text-sm font-medium text-zinc-800 pl-1">Nombre y apellido</label>
           <input 
             id="name" 
             v-model="form.name" 
@@ -21,7 +23,7 @@
           />
         </div>
         <div class="mb-4">
-          <label for="email" class="block text-sm font-medium">Email</label>
+          <label for="email" class="flex text-sm font-medium text-zinc-800 pl-1">Email</label>
           <input 
             id="email" 
             v-model="form.email" 
@@ -32,7 +34,7 @@
           />
         </div>
         <div class="mb-4">
-          <label for="message" class="block text-sm font-medium">Mensaje</label>
+          <label for="message" class="flex text-sm font-medium text-zinc-800 pl-1">Mensaje</label>
           <textarea 
             id="message" 
             v-model="form.message" 
@@ -110,26 +112,38 @@ export default {
   border-radius: 8px;
 }
 
+.sectionTitle {
+  font-family: "Be Vietnam Pro", serif;
+  font-weight: 500;
+  text-align: center;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
 input, textarea {
   width: 100%;
+  max-height: 250px;
+  min-height: 50px;
   padding: 0.8rem;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  color: #000;
   padding: 12px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+
 }
 
 button:hover {
-  background-color: #45a049;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
+
 
 @media (max-width: 576px) {
 
