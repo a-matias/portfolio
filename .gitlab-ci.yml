@@ -11,16 +11,17 @@ build:
   stage: build
   script:
     - npm run build
+    - mv dist public
   artifacts:
     paths:
-      - dist  # Guarda la carpeta `dist` generada por el build
+      - public
 
 pages:
   stage: deploy
   script:
-    - mv dist public  # Mueve los archivos generados a la carpeta `public`, necesaria para GitLab Pages
+    - mv dist public
   artifacts:
     paths:
       - public
   only:
-    - main  # O la rama que elijas para desplegar
+    - main
