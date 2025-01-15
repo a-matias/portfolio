@@ -13,12 +13,12 @@ build:
     - npm run build
   artifacts:
     paths:
-       - public  # Define qué carpeta se usará para GitLab Pages
+      - dist  # Guarda la carpeta `dist` generada por el build
 
 pages:
   stage: deploy
   script:
-    - mv dist public
+    - mv dist public  # Mueve los archivos generados a la carpeta `public`, necesaria para GitLab Pages
   artifacts:
     paths:
       - public
