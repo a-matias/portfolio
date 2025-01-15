@@ -34,8 +34,13 @@
     { name: 'JavaScript', icon: require('@/assets/icons/javascript.svg') },
     { name: 'Node.js', icon: require('@/assets/icons/node.svg') },
     
+    { name: 'Firebase', icon: require('@/assets/icons/firebase.svg') },
     { name: 'MySQL', icon: require('@/assets/icons/mysql.svg') },
     { name: 'Git', icon: require('@/assets/icons/git.svg') },
+
+    { name: 'Postman', icon: require('@/assets/icons/postman.svg') },
+    { name: 'Symfony', icon: require('@/assets/icons/symfony.svg') },
+    { name: 'PHP', icon: require('@/assets/icons/php.svg') },
    
     { name: 'HTML', icon: require('@/assets/icons/html.svg'), },
     { name: 'CSS', icon: require('@/assets/icons/css.svg') },
@@ -60,8 +65,8 @@
   .stackGrid {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     height: 60vh;
   }
 
@@ -125,9 +130,36 @@
       display: grid;
       justify-items: center;
       align-items: center;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
     }
+
+    .stack-card{
+      width: 85px !important;
+      height: 85px !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .tech-icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    .tech-name {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
 
     .sectionTitle {
       font-family: "Be Vietnam Pro", serif;
