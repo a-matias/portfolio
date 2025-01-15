@@ -11,6 +11,7 @@
     <div :class="['containerLinks', isMenuOpen ? 'open' : '']">
       <a class="links" href="#home" @click.prevent="scrollToSection('home')">Home / About</a>
       <a class="links" href="#stack" @click.prevent="scrollToSection('stack')">Stack / Projects</a>
+      <a class="links" href="#contact" @click.prevent="scrollToSection('contact')">Contact</a>
     </div>
   </div>
 </template>

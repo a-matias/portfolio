@@ -11,13 +11,19 @@
 
       </div>
 
-    <div class="containerComponent min-h-screen flex">
+      <div class="containerComponent min-h-screen flex">
 
-      <StackComponent id="stack" />
+        <StackComponent id="stack" />
 
-      <ProjectsComponent id="projects" />
+        <ProjectsComponent id="projects" />
 
-    </div>
+      </div>
+
+      <div class="min-h-screen flex">
+
+        <ContactComponent />
+        
+      </div>
 
     <FooterComponent />
    
@@ -31,6 +37,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 import NavbarComponent from '@/components/NavbarComponent.vue' ;
 import ProjectsComponent from '@/components/ProjectsComponent.vue';
 import StackComponent from '@/components/StackComponent.vue';
+import ContactComponent from '@/components/ContactComponent.vue';
 
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 
-    <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-400 text-center bg-slate-800 text-white py-6">
+    <div v-scroll="'fade-in'" class="opacity-0 transition-all duration-400 text-center bg-slate-900 p-5">
         
         <p>&copy; 2025 Matías Andrés.</p>
         <p>Todos los derechos reservados.</p>
@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style scoped>
-/* Puedes agregar estilos específicos para este componente */
+p{
+  color:#ffffff;
+  font-size: 22px;
+}
 </style>
 
