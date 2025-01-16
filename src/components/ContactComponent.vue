@@ -52,27 +52,67 @@
 
 <script lang="ts">
 import { ref } from 'vue';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2'; // Importa SweetAlert2
 
 export default {
   setup() {
+    // Define los campos del formulario
     const form = ref({
       name: '',
       email: '',
-      message: ''
+      message: '',
     });
 
-    const handleSubmit = () => {
-      console.log('Formulario enviado:', form.value);
-      form.value.name = '';
-      form.value.email = '';
-      form.value.message = '';
+    // Método para manejar el envío del formulario
+    const handleSubmit = async () => {
+      const templateParams = {
+        from_email: form.value.email, // Email del remitente
+        from_name: form.value.name, // Nombre del remitente
+        message: form.value.message, // Mensaje del remitente
+      };
+
+      try {
+        const response = await emailjs.send(
+          'service_6yaf2g8', // Tu Service ID
+          'template_0wzljpr', // Tu Template ID
+          templateParams,
+          'Iu7t4T6sTM9d5u7mj' // Tu Public Key
+        );
+
+        if (response.status === 200) {
+          // SweetAlert para éxito
+          Swal.fire({
+            icon: 'success',
+            title: '¡Correo enviado!',
+            text: 'Tu mensaje fue enviado correctamente.',
+            confirmButtonColor: '#4CAF50', // Color del botón
+          });
+
+          // Limpia los campos del formulario
+          form.value.name = '';
+          form.value.email = '';
+          form.value.message = '';
+        }
+      } catch (error) {
+        console.error('Error al enviar el correo:', error);
+
+        // SweetAlert para error
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
+          confirmButtonColor: '#F44336', // Color del botón
+        });
+      }
     };
 
     return { form, handleSubmit };
-  }
+  },
 };
-
 </script>
+
+
 
 <style scoped>
 
