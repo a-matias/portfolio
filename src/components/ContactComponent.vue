@@ -1,6 +1,5 @@
 <template>
-  <div class="container min-w-full" id="contact">
-    
+  <div class="container min-w-full opacity-0 transition-all duration-500" id="contact" v-scroll="'fade-in'">
     <!-- Logo -->
     <div class="logo">
       <img src="@/assets/email.svg" alt="Email" />
@@ -17,7 +16,7 @@
             id="name" 
             v-model="form.name" 
             type="text" 
-            placeholder="Tu nombre" 
+            placeholder="Tu nombre y apellido" 
             required 
             class="w-full p-2 mt-2 border rounded-md"
           />
@@ -43,10 +42,7 @@
             class="w-full p-2 mt-2 border rounded-md"
           ></textarea>
         </div>
-        <button 
-          type="submit" 
-          class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition"
-        >
+        <button type="submit" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">
           Enviar
         </button>
       </form>
@@ -56,7 +52,6 @@
 
 <script lang="ts">
 import { ref } from 'vue';
-import storyset from '../assets/email.svg';
 
 export default {
   setup() {
