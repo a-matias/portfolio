@@ -13,7 +13,8 @@ cache:
 before_script:
   # Instala dependencias del proyecto y las nuevas librerías
   - npm install
-  - npm install sweetalert2 emailjs-com --save  # Instala SweetAlert2 y EmailJS
+  - npm install sweetalert2  # Instala SweetAlert2
+  - npm install --save @emailjs/browser
 
 build:
   stage: build
