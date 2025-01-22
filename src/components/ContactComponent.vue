@@ -53,7 +53,7 @@
 <script lang="ts">
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
-/*import Swal from 'sweetalert2'; */
+/*import Swal from 'sweetalert2';*/ 
 
 export default {
   setup() {
@@ -65,14 +65,32 @@ export default {
     });
 
     // Método para manejar el envío del formulario
-    const handleSubmit = async () => {
+    /*const handleSubmit = async () => {
       const templateParams = {
         from_email: form.value.email, // Email del remitente
         from_name: form.value.name, // Nombre del remitente
         message: form.value.message, // Mensaje del remitente
+      };*/
+
+      const handleSubmit = async () => {
+        const templateParams = {
+          from_email: form.value.email, // Email del remitente
+          from_name: form.value.name, // Nombre del remitente
+          message: form.value.message, // Mensaje del remitente
       };
 
-      try {
+    emailjs.send('service_6yaf2g8', 'template_0wzljpr', templateParams, 'Iu7t4T6sTM9d5u7mj').then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    )};
+
+
+
+     /* try {
         const response = await emailjs.send(
           'service_6yaf2g8', // Tu Service ID
           'template_0wzljpr', // Tu Template ID
@@ -82,12 +100,12 @@ export default {
 
         if (response.status === 200) {
           // SweetAlert para éxito
-          /*Swal.fire({
+          Swal.fire({
             icon: 'success',
             title: '¡Correo enviado!',
             text: 'Tu mensaje fue enviado correctamente.',
             confirmButtonColor: '#4CAF50', // Color del botón
-          });*/
+          });
 
           // Limpia los campos del formulario
           form.value.name = '';
@@ -98,14 +116,14 @@ export default {
         console.error('Error al enviar el correo:', error);
 
         // SweetAlert para error
-        /*Swal.fire({
+        Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
           confirmButtonColor: '#F44336', // Color del botón
-        });*/
+        });
       }
-    };
+    };*/
 
     return { form, handleSubmit };
   },
