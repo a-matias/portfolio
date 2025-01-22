@@ -53,7 +53,7 @@
 <script lang="ts">
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
-/*import Swal from 'sweetalert2';*/ 
+import Swal from 'sweetalert2'; 
 
 export default {
   setup() {
@@ -65,38 +65,22 @@ export default {
     });
 
     // Método para manejar el envío del formulario
-    /*const handleSubmit = async () => {
+    const handleSubmit = async () => {
       const templateParams = {
         from_email: form.value.email, // Email del remitente
         from_name: form.value.name, // Nombre del remitente
         message: form.value.message, // Mensaje del remitente
-      };*/
-
-      const handleSubmit = async () => {
-        const templateParams = {
-          from_email: form.value.email, // Email del remitente
-          from_name: form.value.name, // Nombre del remitente
-          message: form.value.message, // Mensaje del remitente
       };
 
-    emailjs.send('service_6yaf2g8', 'template_0wzljpr', templateParams, 'Iu7t4T6sTM9d5u7mj').then(
-      (response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      },
-      (error) => {
-        console.log('FAILED...', error);
-      },
-    )};
-
-
-
-     /* try {
+      try {
         const response = await emailjs.send(
-          'service_6yaf2g8', // Tu Service ID
-          'template_0wzljpr', // Tu Template ID
+          process.env.VUE_APP_EMAILJS_SERVICE_ID,  // Acceder a la variable de entorno
+          process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
           templateParams,
-          'Iu7t4T6sTM9d5u7mj' // Tu Public Key
+          process.env.VUE_APP_EMAILJS_PUBLIC_KEY
         );
+
+
 
         if (response.status === 200) {
           // SweetAlert para éxito
@@ -123,7 +107,7 @@ export default {
           confirmButtonColor: '#F44336', // Color del botón
         });
       }
-    };*/
+    };
 
     return { form, handleSubmit };
   },
