@@ -8,7 +8,7 @@
 
     <!-- Formulario -->
     <div class="form">
-      <h2 class="sectionTitle">Contactame</h2>  
+      <h2 class="sectionTitle">Contactameee</h2>  
       <form @submit.prevent="handleSubmit">
         <div class="mb-4">
           <label for="name" class="flex text-sm font-medium text-zinc-800 pl-1">Nombre y apellido</label>
