@@ -53,7 +53,7 @@
 <script lang="ts">
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
-import Swal from 'sweetalert2'; // Importa SweetAlert2
+/*import Swal from 'sweetalert2'; */
 
 export default {
   setup() {
@@ -82,12 +82,12 @@ export default {
 
         if (response.status === 200) {
           // SweetAlert para éxito
-          Swal.fire({
+          /*Swal.fire({
             icon: 'success',
             title: '¡Correo enviado!',
             text: 'Tu mensaje fue enviado correctamente.',
             confirmButtonColor: '#4CAF50', // Color del botón
-          });
+          });*/
 
           // Limpia los campos del formulario
           form.value.name = '';
@@ -98,12 +98,12 @@ export default {
         console.error('Error al enviar el correo:', error);
 
         // SweetAlert para error
-        Swal.fire({
+        /*Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
           confirmButtonColor: '#F44336', // Color del botón
-        });
+        });*/
       }
     };
 
