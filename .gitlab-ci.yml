@@ -26,7 +26,10 @@ build:
 pages:
   stage: deploy
   script:
-    - mv dist public  # GitLab Pages requiere una carpeta llamada "public"
+    - ls -la dist
+    - mv dist public
+    - ls -la public
+
   artifacts:
     paths:
       - public  # La carpeta que GitLab Pages usará para el despliegue
