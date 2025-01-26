@@ -11,7 +11,6 @@ build:
     stage: build
   script:
     - npm run build
-    - mv dist public
     #- mv dist public
   artifacts:
     paths:
