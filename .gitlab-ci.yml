@@ -8,17 +8,20 @@ before_script:
   - npm install
 
 build:
-  stage: build
+    stage: build
   script:
     - npm run build
     - mv dist public
+    #- mv dist public
   artifacts:
     paths:
       - public  # Especificamos la carpeta que GitLab Pages debe usar para el despliegue
 
+      - dist
 pages:
   stage: deploy
   script:
+
     - mv dist public
   artifacts:
     paths:
