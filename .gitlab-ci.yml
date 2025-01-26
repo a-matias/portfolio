@@ -15,12 +15,14 @@ build:
   stage: build
   script:
     - npm run build
-    - mv dist public  # Mueve la carpeta dist a public para GitLab Pages
+    - rm -rf public  # Limpia cualquier contenido previo
+    - mkdir -p public
+    - cp -r dist/* public/  # Copia explícitamente todos los archivos
   artifacts:
     paths:
-      - public  # GitLab Pages necesita la carpeta public
+      - public
   only:
-    - main  # Solo se ejecutará en la rama main
+    - main
 
 pages:
   stage: deploy
