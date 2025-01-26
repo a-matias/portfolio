@@ -4,34 +4,24 @@ stages:
   - build
   - deploy
 
-cache:
-  key: $CI_COMMIT_REF_SLUG
-  paths:
-    - node_modules/
-  policy: push
-
 before_script:
-  # Instala dependencias del proyecto y las nuevas librerías
   - npm install
-  - npm install sweetalert2 emailjs-com --save  # Instala SweetAlert2 y EmailJS
 
 build:
   stage: build
   script:
-    - npm run build  # Compila el proyecto de Vue
+    - npm run build
+    - mv dist public
   artifacts:
     paths:
-      - dist  # Guardamos solo la carpeta dist para el despliegue
+      - public  # Especificamos la carpeta que GitLab Pages debe usar para el despliegue
 
 pages:
   stage: deploy
   script:
-    - ls -la dist
     - mv dist public
-    - ls -la public
-
   artifacts:
     paths:
-      - public  # La carpeta que GitLab Pages usará para el despliegue
+      - public
   only:
-    - main  # Solo se ejecuta en la rama principal (main)
+    - main  # Esto asegura que solo la rama principal (main) se desplegará en GitLab Pages
