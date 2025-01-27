@@ -6,30 +6,31 @@ stages:
 
 cache:
   paths:
-    - node_modules/  # Cachear node_modules para acelerar futuras ejecuciones
+    - node_modules/  # Cachear dependencias para acelerar futuros pipelines
 
 before_script:
-  - npm install
+  - npm ci  # Instala dependencias (más confiable que npm install)
 
 build:
   stage: build
   script:
-    - npm run build
-    - rm -rf public  # Limpia cualquier contenido previo
+    - npm run build  # Construye el proyecto
+    - rm -rf public  # Limpia cualquier despliegue previo
     - mkdir -p public
-    - cp -r dist/* public/  # Copia explícitamente todos los archivos
+    - cp -r dist/* public/  # Copia los archivos generados a la carpeta public
+    - ls -la public  # Verifica los archivos en la carpeta public
   artifacts:
     paths:
       - public
   only:
-    - main
+    - main  # Corre el job solo en la rama main
 
 pages:
   stage: deploy
   script:
-    - echo "Despliegue completado"
+    - echo "Archivos listos para GitLab Pages"
   artifacts:
     paths:
-      - public  # La carpeta que se usará para el hosting
+      - public
   only:
     - main
