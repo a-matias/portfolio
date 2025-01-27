@@ -14,11 +14,12 @@ before_script:
 build:
   stage: build
   script:
-    - npm run build  # Construye el proyecto
-    - rm -rf public  # Limpia cualquier despliegue previo
+    - npm run build
+    - ls -l dist  # Verifica contenido
+    - rm -rf public
     - mkdir -p public
-    - cp -r dist/* public/  # Copia los archivos generados a la carpeta public
-    - ls -la public  # Verifica los archivos en la carpeta public
+    - cp -r dist/* public/
+
   artifacts:
     paths:
       - public
