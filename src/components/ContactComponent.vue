@@ -80,8 +80,6 @@ export default {
           process.env.VUE_APP_EMAILJS_PUBLIC_KEY
         );
 
-
-
         if (response.status === 200) {
           // SweetAlert para éxito
           Swal.fire({
