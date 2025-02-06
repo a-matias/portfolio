@@ -32,7 +32,7 @@ build:
 deploy:
   stage: deploy
   script:
-    - echo "Archivos listos para despliegue."
+    - echo "Archivos listos para el despliegue."
   artifacts:
     paths:
       - public  # Usa los archivos generados en public para desplegar
