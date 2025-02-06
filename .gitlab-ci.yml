@@ -6,7 +6,7 @@ stages:
 
 cache:
   paths:
-    - node_modules/  # Cachear dependencias para acelerar futuros pipelines
+    - node_modules/  # Cachea dependencias para acelerar futuros pipelines
 
 before_script:
   - npm ci  # Instala dependencias (más confiable que npm install)
@@ -14,23 +14,27 @@ before_script:
 build:
   stage: build
   script:
+    - echo "Limpiando carpetas previas..."
+    - rm -rf dist public  # Elimina dist y public si existen
+    - echo "Construyendo el proyecto..."
     - npm run build  # Construye el proyecto
-    - rm -rf public  # Limpia cualquier despliegue previo
-    - mkdir -p public
-    - cp -r dist/* public/  # Copia los archivos generados a la carpeta public
-    - ls -la public  # Verifica los archivos en la carpeta public
+    - echo "Preparando archivos para despliegue..."
+    - mkdir -p public  # Crea la carpeta public
+    - cp -r dist/* public/  # Copia el contenido de dist a public
+    - ls -l public  # Verifica el contenido de la carpeta public
   artifacts:
     paths:
-      - public
+      - public  # Guarda la carpeta public como artefacto
+    expire_in: 1 week  # Los artefactos estarán disponibles por una semana
   only:
     - main  # Corre el job solo en la rama main
 
-pages:
+deploy:
   stage: deploy
   script:
-    - echo "Archivos listos para GitLab Pages"
+    - echo "Archivos listos para el despliegue."
   artifacts:
     paths:
-      - public
+      - public  # Usa los archivos generados en public para desplegar
   only:
     - main
