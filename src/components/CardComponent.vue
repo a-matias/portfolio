@@ -50,8 +50,8 @@ import 'swiper/css';
 const cards = ref([
   {
     title: 'Guia Digital',
-    description: 'Un sitio web moderno y eficiente .',
-    image: 'https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png',
+    description: 'Publicá y promocioná tu negocio fácil y rápido. Registrate, completá el formulario, subí tus fotos, pagá con Mercado Pago y listo.',
+    image: 'https://i.postimg.cc/MTrc4pzH/Sin-t-tulo-320-x-200-px-1.png',
     link: 'http://www.guiadigital.com.ar',
     technologies: [
       require('@/assets/icons/laravel.svg'),
@@ -63,8 +63,8 @@ const cards = ref([
   },
   {
     title: 'J-Cordero',
-    description: 'Desarrollo de aplicaciones robustas.',
-    image: 'https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png',
+    description: 'Explorá propiedades en venta y alquiler con fotos, detalles y contacto directo.',
+    image: 'https://i.postimg.cc/281dCgtg/Sin-t-tulo-320-x-200-px.png',
     link: 'https://www.j-cordero.com.ar',
     technologies: [
       require('@/assets/icons/laravel.svg'),

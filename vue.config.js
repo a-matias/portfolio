@@ -1,5 +1,5 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/portfolio/'  // Aquí colocamos la ruta correcta
+    ? '/portfolio/'  // <- Para GitHub
     : '/'
 };
