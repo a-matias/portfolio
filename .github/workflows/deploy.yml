@@ -29,16 +29,19 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Remove previous builds
+        run: rm -rf dist node_modules package-lock.json
 
-      - name: Clean previous builds
-        run: rm -rf dist
+      - name: Install dependencies
+        run: npm install
+
+      - name: Verify Vue version
+        run: npm list vue
 
       - name: Build project
         run: npm run build
 
-      - name: Verify build output
+      - name: Check build output
         run: ls -l dist
 
       - name: Setup Pages
