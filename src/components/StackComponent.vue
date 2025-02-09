@@ -26,26 +26,28 @@
   // Lista de tecnologías
   const technologies = ref([
 
-    { name: 'Sass', icon: require('@/assets/icons/sass.svg') },
-    { name: 'Vue.js', icon: require('@/assets/icons/vue.svg') },
-    { name: 'Laravel', icon: require('@/assets/icons/laravel.svg') },
-
+    
+    {name: 'Python', icon: require('@/assets/icons/python.svg') },
     { name: 'TypeScript', icon: require('@/assets/icons/typescript.svg') },
     { name: 'JavaScript', icon: require('@/assets/icons/javascript.svg') },
-    { name: 'Node.js', icon: require('@/assets/icons/node.svg') },
+    { name: 'PHP', icon: require('@/assets/icons/php.svg') },
+    
+    { name: 'flask', icon: require('@/assets/icons/flask.svg') },
+    { name: 'Vue.js', icon: require('@/assets/icons/vue.svg') },
+    { name: 'Laravel', icon: require('@/assets/icons/laravel.svg') },
+    { name: 'Symfony', icon: require('@/assets/icons/symfony.svg') },
+    
     
     { name: 'Firebase', icon: require('@/assets/icons/firebase.svg') },
     { name: 'MySQL', icon: require('@/assets/icons/mysql.svg') },
     { name: 'Git', icon: require('@/assets/icons/git.svg') },
-
     { name: 'Postman', icon: require('@/assets/icons/postman.svg') },
-    { name: 'Symfony', icon: require('@/assets/icons/symfony.svg') },
-    { name: 'PHP', icon: require('@/assets/icons/php.svg') },
-   
-    { name: 'HTML', icon: require('@/assets/icons/html.svg'), },
+
+    { name: 'Sass', icon: require('@/assets/icons/sass.svg') },
     { name: 'CSS', icon: require('@/assets/icons/css.svg') },
     { name: 'Bootstrap', icon: require('@/assets/icons/bootstrap.svg') },
     { name: 'Tailwind', icon: require('@/assets/icons/tailwind.svg') },
+   
   ]);
   
   // Control del índice activo para animación de hover
