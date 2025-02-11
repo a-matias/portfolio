@@ -2,8 +2,8 @@ import { createApp } from 'vue';
 import App from './App.vue';
 
 import 'animate.css';
-import "@/assets/tailwind.css"; // Importar el archivo de Tailwind CSS
-import "@/assets/style.scss";  // Si también estás usando SCSS
+//import "@/assets/tailwind.css"; // Importar el archivo de Tailwind CSS
+import "@/assets/styles/app.css"; 
 import scroll from '@/directives/scroll';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
