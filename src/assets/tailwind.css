@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* Esto es un ejemplo en tu archivo de estilos globales o tailwind.css */
 @keyframes fadeIn {
     0% {

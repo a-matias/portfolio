@@ -1,30 +1,17 @@
 <template>
   <div id="app">
-    <!-- Navbar -->
       <NavbarComponent />
-
       <div class="containerComponent min-h-screen flex">
-
         <HomeComponent id="home" />
-
         <AboutComponent id="about" />
-
       </div>
-
       <div class="containerComponent min-h-screen flex">
-
         <StackComponent id="stack" />
-
         <ProjectsComponent id="projects" />
-
       </div>
-
       <div class="min-h-screen flex">
-
         <ContactComponent />
-        
       </div>
-
     <FooterComponent />
    
   </div>
@@ -76,6 +63,5 @@ section {
 footer {
   margin-top: 50px;
 }
-
 
 </style>
