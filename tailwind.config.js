@@ -1,7 +1,8 @@
 module.exports = {
   content: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}', // Incluir todos los archivos Vue, JS, TS, etc.
+    './index.html', // Asegúrate de que este archivo se analice
+    './src/**/*.{vue,js,ts,jsx,tsx}', // Incluir todos los archivos Vue, JS, TS, JSX, y TSX
+    './dist/**/*.html', // Incluir archivos HTML generados en dist (por ejemplo, después de un build)
   ],
   theme: {
     extend: {
