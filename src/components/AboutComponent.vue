@@ -23,7 +23,7 @@ const initializeTypewriter = () => {
       
       
     });
-
+    
     typewriter
     .typeString('{ <br>')
     .pauseFor(60)
@@ -34,7 +34,7 @@ const initializeTypewriter = () => {
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Pasión": "Desarrollo tecnológico", <br>')
     .pauseFor(60)
    
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": "Gestiono plataformas web", <br>')
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": "Gestiono plataformas Web", <br>')
     .pauseFor(60)
 
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Tecnologías": [ <br>')
@@ -48,21 +48,32 @@ const initializeTypewriter = () => {
 
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Laravel": "Backend"}, <br>')
     .pauseFor(60)
-
+    
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;], <br>')
     .pauseFor(60)
-
+    /*
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": "Bases de datos, APIs REST", <br>')
     .pauseFor(60)
+    */
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": { <br>')
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Bases de datos": "Gestión y modelado", <br>')
+    .pauseFor(60)
+
+    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"APIs REST": "Diseño e integración", <br>')
+    .pauseFor(60)
+
+    .typeString(' &nbsp;&nbsp;&nbsp;&nbsp;}, <br>')
+    .pauseFor(60)
+
 
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Meta": "Innovación digital", <br>')
     .pauseFor(60)
 
     .typeString('}')
     .start();
-
-
-
 
   }
 };

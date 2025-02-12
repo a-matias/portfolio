@@ -44,7 +44,7 @@ typewriterEffect();
    
 </script>
 
-  
+
 <style scoped>
 
 .container{
@@ -116,7 +116,6 @@ img{
     box-shadow: none;
     background-color:inherit;
   }
-
 }
 
 @media (max-width: 576px) {
@@ -143,7 +142,6 @@ img{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 5px;
     border-radius: 20px; 
-
   }
 
   .nombre{
