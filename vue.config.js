@@ -1,8 +1,5 @@
-
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/portfolio/'
-    : '/'
- }
- 
-
+    ? '/portfolio/' // En producción, usar el subdirectorio portfolio
+    : '/'            // En desarrollo, la raíz
+}
