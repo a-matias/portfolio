@@ -1,85 +1,85 @@
 <template>
-    <div class="ContainerIcons">
-      <ul class="iconSocial">
-        <FontAwesomeIcon :icon="['fab', 'linkedin']" />
-      </ul>
-      <ul class="iconSocial">
-        <font-awesome-icon :icon="['fab', 'whatsapp']" />
-      </ul>
-      <ul class="iconSocial">
-        <FontAwesomeIcon :icon="['fas', 'envelope']" />
-      </ul>
-    </div>
-  </template>
-  
-  <script lang="ts" setup>
+  <div class="ContainerIcons">
+    <a href="https://www.linkedin.com/in/matías-e-andrés/" target="_blank" class="iconSocial">
+      <FontAwesomeIcon :icon="['fab', 'linkedin']" />
+    </a>
+    <a href="https://wa.me/5491169592814" target="_blank" class="iconSocial">
+      <FontAwesomeIcon :icon="['fab', 'whatsapp']" />
+    </a>
+    <a href="https://github.com/a-matias" target="_blank" class="iconSocial">
+      <FontAwesomeIcon :icon="['fab', 'github']" />
+    </a>
+    <a href="https://github.com/a-matias" target="_blank" class="iconSocial">
+      <FontAwesomeIcon :icon="['fab', 'gitlab']" />
+    </a>
+    <a href="mailto:matias.e.andres@gmail.com" class="iconSocial">
+      <FontAwesomeIcon :icon="['fas', 'envelope']" />
+    </a>
+  </div>
+</template>
 
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-    import { library } from '@fortawesome/fontawesome-svg-core';
-    import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-    import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+<script lang="ts" setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faWhatsapp, faLinkedin, faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-    
-    library.add(faWhatsapp, faLinkedin, faEnvelope);
+library.add(faWhatsapp, faLinkedin, faEnvelope, faGithub, faGitlab);
+</script>
 
-  </script>
-  
-  <style scoped>
-    
-  .ContainerIcons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 20vw;   
+<style scoped>
+.ContainerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 20vw;
+  height: 10vh;
+  align-items: flex-end;
+}
+
+.iconSocial {
+  display: flex;
+  width: 3vw;
+  height: 3vw;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgb(27, 27, 26);
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconSocial svg {
+  font-size: 1.6em;
+}
+
+.iconSocial:hover {
+  background-color: rgb(27, 27, 26);
+  color: aliceblue;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .ContainerIcons {
+    width: 80vw;
     height: 10vh;
-    align-items:flex-end;
   }
 
   .iconSocial {
-      display: flex;
-      width: 3vw;
-      height: 3vw;
-      font-size: 20px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      border: 2px solid rgb(27, 27, 26);
-      margin-left: 5px;
-      margin-right: 5px;
+    width: 10vw;
+    height: 5vh;
+    font-size: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
-  .iconSocial:hover{
-      background-color:rgb(27, 27, 26);
-      color:aliceblue;
-      transition: 0.4s;
-      cursor: pointer;
+  .iconSocial svg {
+    font-size: 1.6em;
   }
 
-  @media (max-width: 576px) {
-
-    .ContainerIcons{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 50vw;   
-      height: 10vh;
-      align-items:flex-end;
-    }
-
-    .iconSocial {
-      display: flex;
-      width: 8vw;
-      height: 4vh;
-      font-size: 16px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      border: 2px solid rgb(27, 27, 26);
-      margin-left: 2px;
-      margin-right: 2px;
-    }
-
-  }
-
-  </style>
-  
+}
+</style>
