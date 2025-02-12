@@ -1,57 +1,82 @@
+# Define el nombre del flujo de trabajo
 name: Deploy static content to GitHub Pages
 
+# Define los eventos que disparan este flujo de trabajo
 on:
+  # El flujo se ejecuta cuando hay un push a la rama "main"
   push:
     branches: ["main"]
+  # También puedes ejecutar el flujo manualmente
   workflow_dispatch:
 
+# Define los permisos necesarios para el flujo de trabajo
 permissions:
+  # Permiso de solo lectura para los contenidos del repositorio
   contents: read
+  # Permiso para escribir en GitHub Pages (realizar el despliegue)
   pages: write
+  # Permiso para usar el token de autenticación (usado en despliegue)
   id-token: write
 
+# Controla la ejecución concurrente de los trabajos
 concurrency:
+  # Agrupa los trabajos bajo el nombre "pages"
   group: "pages"
+  # No cancela los trabajos en progreso, incluso si hay un nuevo trabajo
   cancel-in-progress: false
 
 jobs:
+  # Define el trabajo de despliegue
   deploy:
+    # Define el entorno de trabajo, en este caso "github-pages"
     environment:
       name: github-pages
+      # Define la URL del sitio una vez desplegado
       url: ${{ steps.deployment.outputs.page_url }}
+    # Usa un entorno de Ubuntu para ejecutar el trabajo
     runs-on: ubuntu-latest
     steps:
+      # Paso 1: Descargar el repositorio a la máquina del runner
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Paso 2: Configurar Node.js con la versión 18
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      # Paso 3: Instalar Vue (aunque este paso es redundante si ya está en package.json)
       - name: Install Vue
-        run: npm instal vue
+        run: npm install vue
 
+      # Paso 4: Instalar todas las dependencias definidas en package.json
       - name: Install dependencies
         run: npm install
 
+      # Paso 5: Limpiar cualquier build previo (eliminando la carpeta 'dist')
       - name: Clean previous builds
         run: rm -rf dist
 
+      # Paso 6: Generar el build del proyecto (lo que se subirá a GitHub Pages)
       - name: Build project
         run: npm run build
 
+      # Paso 7: Verificar que el build se ha generado correctamente
       - name: Verify build output
         run: ls -l dist
 
+      # Paso 8: Configurar la página para que GitHub Pages pueda usarla
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Paso 9: Subir el contenido de la carpeta 'dist' como un artefacto
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'dist'
 
+      # Paso 10: Desplegar el artefacto a GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
