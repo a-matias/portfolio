@@ -13,27 +13,25 @@
         <ContactComponent />
       </div>
     <FooterComponent />
-   
   </div>
 </template>
 
 <script lang="ts" setup>
+import NavbarComponent from '@/components/NavbarComponent.vue';
 import HomeComponent from '@/components/HomeComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
-import NavbarComponent from '@/components/NavbarComponent.vue' ;
-import ProjectsComponent from '@/components/ProjectsComponent.vue';
 import StackComponent from '@/components/StackComponent.vue';
+import ProjectsComponent from '@/components/ProjectsComponent.vue';
 import ContactComponent from '@/components/ContactComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 </script>
 
 <style lang="scss">
 
 main {
-  margin-top: 80px; /* Ajusta este valor según la altura de la barra de navegación */
+  margin-top: 80px;
 }
-
 
 #app {
   display: flex;
