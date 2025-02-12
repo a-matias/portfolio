@@ -5,7 +5,7 @@
       <div class="capsuleCard justify-center" v-for="(card, index) in cards" :key="index">
         <div class="card">
           <a :href="card.link" target="_blank" rel="noopener noreferrer">
-            <img class="rounded-t-lg object-cover w-full" :src="card.image" alt="Card image" />
+            <img class="rounded-t-lg object-cover w-full sm:max-w-[90%] sm:mx-auto" :src="card.image" alt="Card image" />
           </a>
           <div class="p-5">
             <a :href="card.link" target="_blank" rel="noopener noreferrer">
@@ -140,6 +140,7 @@ const $isMobile = computed(() => window.innerWidth <= 576);
 
   .swiper-container {
     display: block;
+    
 
   }
 

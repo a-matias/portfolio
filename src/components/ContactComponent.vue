@@ -202,12 +202,10 @@ button:hover {
     display: flex;
     justify-content: center;
     padding: 20px;
-    
   }
 
   .form form{
     width: 90vw;
-    
   }
 
 }
