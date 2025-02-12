@@ -2,10 +2,10 @@
     <section class="container" id="about">
       <div class="opacity-0 transition-all duration-500 text-center" v-scroll="'fade-in'">
       
-      <h2 class="sectionTitle">Proyectos realizados</h2>
-      
-      <CardComponent/>
-       
+        <h2 class="sectionTitle">Proyectos realizados</h2>
+        
+        <CardComponent/>
+        
       </div>
     </section>
 </template>

@@ -51,10 +51,6 @@ const initializeTypewriter = () => {
     
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;], <br>')
     .pauseFor(60)
-    /*
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": "Bases de datos, APIs REST", <br>')
-    .pauseFor(60)
-    */
 
     .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": { <br>')
     .pauseFor(60)
@@ -129,13 +125,11 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     width: 90vw;
-    /*background-color: #1f274b;*/
     background-color: #111529;
   }
 
   #typewriter{
     font-size: 0.8em;
-
   }
 
 }
