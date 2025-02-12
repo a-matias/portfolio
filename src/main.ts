@@ -2,7 +2,8 @@ import { createApp } from 'vue';
 import App from './App.vue';
 
 import 'animate.css';
-import "@/assets/tailwind.css";
+import './assets/tailwind.css';
+//import "@/assets/tailwind.css";
 import "@/assets/style.scss";  
 import scroll from '@/directives/scroll';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
