@@ -9,7 +9,7 @@
     <a href="https://github.com/a-matias" target="_blank" class="iconSocial">
       <FontAwesomeIcon :icon="['fab', 'github']" />
     </a>
-    <a href="https://github.com/a-matias" target="_blank" class="iconSocial">
+    <a href="https://gitlab.com/matias-andres" target="_blank" class="iconSocial">
       <FontAwesomeIcon :icon="['fab', 'gitlab']" />
     </a>
     <a href="mailto:matias.e.andres@gmail.com" class="iconSocial">
