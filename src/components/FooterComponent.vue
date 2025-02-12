@@ -1,5 +1,5 @@
 <template>
-    <div  class="opacity-0 transition-all duration-400 text-center bg-slate-900 p-5" id="footer" v-scroll="'fade-in'">
+    <div class="opacity-0 transition-all duration-500 text-center bg-slate-900 p-5" v-scroll="'fade-in'">
         
         <p>&copy; 2025 Matías Andrés.</p>
         <p>Todos los derechos reservados.</p>

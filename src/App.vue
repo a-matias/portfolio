@@ -17,6 +17,18 @@
 </template>
 
 <script lang="ts" setup>
+import { watch } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+// Observa los cambios de ruta y actualiza el título
+watch(route, (newRoute) => {
+  document.title = newRoute.meta.title || "Mi Página";
+}, { immediate: true });
+
+
+
 import NavbarComponent from '@/components/NavbarComponent.vue';
 import HomeComponent from '@/components/HomeComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
