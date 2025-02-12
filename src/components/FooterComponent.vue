@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 </script>
 
-<style scoped>
+<style>
 p{
   color:#ffffff;
   font-size: 22px;
