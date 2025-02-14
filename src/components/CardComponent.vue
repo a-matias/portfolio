@@ -5,7 +5,7 @@
       <div class="capsuleCard justify-center" v-for="(card, index) in cards" :key="index">
         <div class="card">
           <a :href="card.link" target="_blank" rel="noopener noreferrer">
-            <img class="rounded-t-lg object-cover w-full sm:max-w-[90%] sm:mx-auto" :src="card.image" alt="Card image" />
+            <img class="cardImage" :src="card.image" alt="Card image" />
           </a>
           <div class="p-5">
             <a :href="card.link" target="_blank" rel="noopener noreferrer">
@@ -133,21 +133,49 @@ const $isMobile = computed(() => window.innerWidth <= 576);
   height: 80vh;
 }
 
+@media (max-width: 1024px) {
+  .containerCard {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .capsuleCard {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 40vw;
+    padding: 3vw;
+  }
+
+  .capsuleCard:hover{
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    transition: 0.2s ease-in;
+  }
+  
+  .card {
+    width: 100vw;
+    height: 30vh;
+    
+  }
+}
+
+
 @media (max-width: 576px) {
   .containerCard {
     display: none;
+    align-items: center;
   }
 
   .swiper-container {
     display: block;
-    
-
   }
 
   .card {
     width: 80vw;
     height: 50vh;
-    
   }
+
 }
 </style>

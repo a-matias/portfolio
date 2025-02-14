@@ -12,7 +12,7 @@
       <div class="min-h-screen flex">
         <ContactComponent />
       </div>
-    <FooterComponent />
+     <FooterComponent />
   </div>
 </template>
 
@@ -40,16 +40,15 @@ main {
   text-align: center;
 }
 
-.containerComponent{
+.containerComponent {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
 }
 
-@media  (max-width: 576px) {
-  .containerComponent{
-    display: flex;
+@media (max-width: 1024px) {
+  .containerComponent {
     flex-direction: column;
   }
 }

@@ -111,6 +111,27 @@ onMounted(() => {
  
 }
 
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .cardAbout {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    background-color: #111529;
+  }
+
+  #typewriter{
+    font-size: 1.5rem;
+  }
+
+}
 
 @media (max-width: 576px) {
   .container {
@@ -129,8 +150,8 @@ onMounted(() => {
   }
 
   #typewriter{
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
-
 }
+
 </style>

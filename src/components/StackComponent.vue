@@ -88,7 +88,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ccc;
+    border: 2px solid #acacac;
     border-radius: 10px;
     transition: transform 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
@@ -117,6 +117,54 @@
   }
 
 
+  @media  (max-width: 1024px) {
+
+    .container {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+    .stackGrid {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-gap: 2.2rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .stack-card{
+      width: 120px !important;
+      height: 120px !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tech-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .tech-name {
+      margin-top: 10px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+
+    .sectionTitle {
+      font-size: 3rem;
+    }
+
+  }
+
+
   @media  (max-width: 576px) {
 
     .container {
@@ -132,6 +180,7 @@
       display: grid;
       justify-items: center;
       align-items: center;
+      grid-gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
     }
@@ -142,11 +191,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      cursor: pointer;
     }
 
     .tech-icon {
@@ -162,14 +206,8 @@
       transition: opacity 0.3s ease;
     }
 
-
     .sectionTitle {
-      font-family: "Be Vietnam Pro", serif;
-      font-weight: 1000;
-      text-align: center;
-      font-style: normal;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
+      font-size: 2.2rem;
     }
 
     .stack-card {

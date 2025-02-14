@@ -147,7 +147,7 @@ export default {
 
 .sectionTitle {
   font-family: "Be Vietnam Pro", serif;
-  font-weight: 500;
+  font-weight: 1000;
   text-align: center;
   font-style: normal;
   font-size: 2.5rem;
@@ -178,7 +178,7 @@ button:hover {
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
 
   .container {
     width: 100vw;
@@ -188,24 +188,18 @@ button:hover {
   }
 
   .logo {
-    width: 100vw;
-    height: auto;
     display: none;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
   }
 
   .form {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    align-items: center;
   }
 
   .form form{
     width: 90vw;
+  }
+  .sectionTitle{
+    font-size: 2.2rem;
   }
 
 }

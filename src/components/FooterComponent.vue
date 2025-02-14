@@ -1,19 +1,14 @@
 <template>
-    <div class="transition-all duration-500 text-center bg-slate-900 p-5" v-scroll="'fade-in'">
-        
+    <div class="bg-gray-800 transition-all duration-500 text-center p-5" v-scroll="'fade-in'">
         <p>&copy; 2025 Matías Andrés.</p>
         <p>Todos los derechos reservados.</p>
-      
     </div>
 </template>
-
-<script lang="ts" setup>
-</script>
 
 <style scoped>
 p{
   color:#ffffff;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 </style>
 

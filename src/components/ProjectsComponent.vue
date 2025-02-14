@@ -36,6 +36,23 @@ import CardComponent from './CardComponent.vue'
     margin-bottom: 30px;
   }
 
+  @media (max-width: 1024px) {
+    
+    .container{
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #1A2140;
+    }
+
+    .sectionTitle{
+      font-size: 3rem;
+    }
+  }
+
+
   @media (max-width: 576px) {
     
     .container{
@@ -48,9 +65,7 @@ import CardComponent from './CardComponent.vue'
     }
 
     .sectionTitle{
-      font-family: "Be Vietnam Pro", serif;
-      font-size: 2rem;
-      text-align: center;
+      font-size: 2.2rem;
     }
   }
 
