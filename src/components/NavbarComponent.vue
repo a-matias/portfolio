@@ -1,7 +1,7 @@
 <template>
   <div :class="['navBar', isScrolled ? 'scrolled' : '']">
     <div class="containerLogo">
-      <img :src="logo" alt="Logo" class="logo" />
+      <img :src="logo" href="#home" @click.prevent="scrollToSection('home')" alt="Logo" class="logo" />
     </div>
     <button class="menuToggle" @click="toggleMenu">
       <span class="material-icons" :class="{ 'open': isMenuOpen }">
@@ -108,7 +108,7 @@ onUnmounted(() => {
 }
 
 /* Vista móvil - Cambios solo aquí */
-@media (max-width: 567px) {
+@media (max-width: 768px ) {
   .navBar {
     display: flex;
     align-items: center;
