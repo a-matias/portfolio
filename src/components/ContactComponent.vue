@@ -121,7 +121,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  }
+}
 
 
 .logo {
@@ -177,6 +177,53 @@ button:hover {
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
+@media (max-width: 1366px) {
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 40vw;
+}
+
+.form {
+  width: 45vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  max-height: 220px;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+}
 
 @media (max-width: 1024px) {
 

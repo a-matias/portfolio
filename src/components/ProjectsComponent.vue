@@ -36,6 +36,20 @@ import CardComponent from './CardComponent.vue'
     margin-bottom: 30px;
   }
 
+  @media (max-width: 1366px) {
+    
+    .container{
+      width: 50vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .sectionTitle{
+      font-size: 2.5rem;
+    }
+  }
+
   @media (max-width: 1024px) {
     
     .container{

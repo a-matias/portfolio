@@ -116,53 +116,83 @@
     opacity: 1;
   }
 
+@media (max-width: 1366px) {
 
-  @media  (max-width: 1024px) {
-
-    .container {
-        display: grid;
-        width: 100vw;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-      }
-
-    .stackGrid {
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      grid-gap: 2.2rem;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-    }
-
-    .stack-card{
-      width: 120px !important;
-      height: 120px !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .tech-icon {
-      width: 30px;
-      height: 30px;
-    }
-
-    .tech-name {
-      margin-top: 10px;
-      font-size: 1.4rem;
-      font-weight: 500;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-
-    .sectionTitle {
-      font-size: 3rem;
-    }
-
+  .container {
+    align-items: flex-start;
   }
+
+  .stackGrid {
+    grid-gap: 0.8rem;
+  }
+
+  .stack-card{
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .tech-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tech-name {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+}
+
+
+@media  (max-width: 1024px) {
+
+  .container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stackGrid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .stack-card{
+    width: 120px !important;
+    height: 120px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tech-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tech-name {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+
+  .sectionTitle {
+    font-size: 3rem;
+  }
+
+}
 
 
   @media  (max-width: 576px) {

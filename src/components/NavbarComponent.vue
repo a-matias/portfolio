@@ -108,6 +108,42 @@ onUnmounted(() => {
 }
 
 /* Vista móvil - Cambios solo aquí */
+@media (max-width: 1366px ) {
+
+.navBar {
+  height: 65px; /* Altura inicial */
+}
+
+.navBar.scrolled {
+  height: 45px; /* Altura reducida al hacer scroll */
+}
+
+.containerLogo {
+  width: 15vw;
+}
+
+.containerLinks {
+  display: flex;
+  width: 75vw;
+  justify-content: flex-end;
+}
+
+.links {
+  font-size: 18px;
+  color: #17202a;
+}
+
+.menuToggle{
+  display: none;
+}
+
+.logo {
+  width: 220px;
+}
+
+}
+
+/* Vista móvil - Cambios solo aquí */
 @media (max-width: 768px ) {
   .navBar {
     display: flex;
@@ -119,7 +155,6 @@ onUnmounted(() => {
     display: flex;
     width: 50vw;
     padding: 0;
-
   }
 
   .logo {

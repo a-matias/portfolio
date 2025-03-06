@@ -63,6 +63,24 @@ library.add(faWhatsapp, faLinkedin, faEnvelope, faGithub, faGitlab);
   cursor: pointer;
 }
 
+@media (max-width: 1366px) {
+  .ContainerIcons {
+    width: 25vw;
+    height: 10vh;
+  }
+
+  .iconSocial {
+    width: 40px;
+    height: 44px;
+    font-size: 12px;
+  }
+
+  .iconSocial svg {
+    font-size: 1.5rem;
+  }
+
+}
+
 @media (max-width: 1024px) {
   .ContainerIcons {
     width: 70vw;

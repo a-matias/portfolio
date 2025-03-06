@@ -133,25 +133,33 @@ const $isMobile = computed(() => window.innerWidth <= 576);
   height: 80vh;
 }
 
+@media (max-width: 1366px) {
+
+  .containerCard {
+    width: 45vw;
+  }
+
+  .capsuleCard {
+    width: 20vw;
+    height: 64vh;
+    padding: 1.5rem;
+  }
+
+  .card {
+    width: 20vw;
+    height: 55vh;
+  }
+}
+
 @media (max-width: 1024px) {
   .containerCard {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
     width: 100vw;
   }
 
   .capsuleCard {
-    display: flex;
-    background-color: #ffffff;
     border-radius: 10px;
     width: 40vw;
     padding: 3vw;
-  }
-
-  .capsuleCard:hover{
-    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    transition: 0.2s ease-in;
   }
   
   .card {
@@ -178,4 +186,5 @@ const $isMobile = computed(() => window.innerWidth <= 576);
   }
 
 }
+
 </style>

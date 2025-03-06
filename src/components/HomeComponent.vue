@@ -99,6 +99,34 @@ img{
   }
 }
 
+@media (max-width: 1366px) {
+
+.container{
+  width: 50vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerHome {
+  justify-content: center;
+  align-content: center;
+  margin: 1rem;
+  width: 40vw;
+  height: 70vh;
+  padding: 5px;
+}
+
+img{
+  width: 18vw;
+}
+
+.nombre{
+  font-size: 2rem;
+}
+}
+
+
 @media (max-width: 1024px) {
 
   .container{

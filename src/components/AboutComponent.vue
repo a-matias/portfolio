@@ -111,6 +111,28 @@ onMounted(() => {
  
 }
 
+@media (max-width: 1366px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .cardAbout {
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+    background-color: #111529;
+  }
+
+  #typewriter{
+    font-size: 1rem;
+  }
+
+}
+
 @media (max-width: 1024px) {
   .container {
     display: flex;
