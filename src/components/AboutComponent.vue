@@ -21,7 +21,6 @@ const initializeTypewriter = () => {
       loop: false,
       delay: 30,
       
-      
     });
     
 typewriter
