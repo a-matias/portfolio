@@ -23,7 +23,7 @@ import CardComponent from './CardComponent.vue'
     width: 50vw;
     justify-content: center;
     align-items: center;
-    background-color: #1A2140;
+    background-color: #17202a;
   }
 
   .sectionTitle {

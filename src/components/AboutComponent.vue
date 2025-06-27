@@ -24,52 +24,63 @@ const initializeTypewriter = () => {
       
     });
     
-    typewriter
-    .typeString('{ <br>')
-    .pauseFor(60)
+typewriter
+  .typeString('{ <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Profesión": "Analista en Sistemas - Desarrollador Web", <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Profesión": "Analista en Sistemas - Desarrollador Web", <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Pasión": "Desarrollo tecnológico", <br>')
-    .pauseFor(60)
-   
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": "Gestiono plataformas Web", <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Pasión": "Crear soluciones tecnológicas eficientes", <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Tecnologías": [ <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": "Diseño, desarrollo y mantenimiento de plataformas web", <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"JavaScript": "Desarrollo Web"}, <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Stack Tecnológico": { <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Vue.js": "Frontend"}, <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Frontend": ["Vue.js", "TypeScript"], <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Laravel": "Backend"}, <br>')
-    .pauseFor(60)
-    
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;], <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Backend": ["Laravel", "PHP"], <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": { <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Base de Datos": ["MySQL"], <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Bases de datos": "Gestión y modelado", <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"DevOps": ["Docker", "Git"], <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"APIs REST": "Diseño e integración", <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Herramientas": ["GitLab", "cPanel", "SSH"] <br>')
+  .pauseFor(60)
 
-    .typeString(' &nbsp;&nbsp;&nbsp;&nbsp;}, <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;}, <br>')
+  .pauseFor(60)
 
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Habilidades": { <br>')
+  .pauseFor(60)
 
-    .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Meta": "Innovación digital", <br>')
-    .pauseFor(60)
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"Base de Datos": "Modelado, consultas complejas y optimización", <br>')
+  .pauseFor(60)
 
-    .typeString('}')
-    .start();
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"APIs REST": "Diseño, consumo e integración de servicios", <br>')
+  .pauseFor(60)
+
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"CI/CD": "Automatización de despliegues con GitLab CI", <br>')
+  .pauseFor(60)
+
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Seguridad Web": "Gestión de claves, HTTPS, buenas prácticas" <br>')
+  .pauseFor(60)
+
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;}, <br>')
+  .pauseFor(60)
+
+  .typeString('&nbsp;&nbsp;&nbsp;&nbsp;"Meta": "Seguir potenciando la innovación digital" <br>')
+  .pauseFor(60)
+
+  .typeString('}')
+  .start();
 
   }
 };
@@ -87,7 +98,7 @@ onMounted(() => {
   width: 50vw;
   justify-content: center;
   align-items: center;  
-  background-color: #1A2140;
+  background-color: #17202a ;
 }
 
 .cardAbout {
@@ -100,14 +111,14 @@ onMounted(() => {
   font-weight: 400;
   text-align: left;
   color: #ffffff;
-  background-color: #111529;
+  background-color: #212c38;
 }
 
 #typewriter{
   font-family: "Cutive", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.3em;
+  font-size: 1.2em;
  
 }
 
