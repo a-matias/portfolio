@@ -22,16 +22,16 @@
 
     <!-- Vista en móvil con slide -->
     <swiper v-show="$isMobile" class="swiper-container" :space-between="20" :slides-per-view="1">
-      <swiper-slide class="flex justify-center pt-12" v-for="(card, index) in cards" :key="index">
+      <swiper-slide class="flex justify-center pt-10" v-for="(card, index) in cards" :key="index">
         <div class="card">
           <a :href="card.link" target="_blank" rel="noopener noreferrer">
-            <img class="rounded-t-lg object-cover w-full" :src="card.image" alt="Card image" />
+            <img class=" rounded-t-3xl object-cover w-full" :src="card.image" alt="Card image" id="image"/>
           </a>
           <div class="w-full p-5">
             <a :href="card.link" target="_blank" rel="noopener noreferrer">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight">{{ card.title }}</h5>
+              <h5 class=" text-gray-900 text-4xl font-bold tracking-tight">{{ card.title }}</h5>
             </a>
-            <div class="tech-icons bg-indigo-300 p-1">
+            <div class="tech-icons bg-gray-200 p-1">
               <img v-for="(icon, iconIndex) in card.technologies" :key="iconIndex" :src="icon" alt="Technology icon" class="tech-icon" />
             </div>
             <p class="text-justify mt-2">{{ card.description }}</p>
@@ -79,6 +79,7 @@ const $isMobile = computed(() => window.innerWidth <= 576);
 </script>
 
 <style scoped>
+
 .containerCard {
   display: flex;
   justify-content: space-around;
@@ -111,7 +112,7 @@ const $isMobile = computed(() => window.innerWidth <= 576);
 
 .card:hover {
   transform: scale(1.1);
-  transition: 0.4s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -183,6 +184,10 @@ const $isMobile = computed(() => window.innerWidth <= 576);
   .card {
     width: 80vw;
     height: 50vh;
+  }
+  #image{
+    width: 100%;
+    padding: 10px;
   }
 
 }
